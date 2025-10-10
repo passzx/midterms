@@ -1,94 +1,114 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Your Cart</title>
-        <link rel="stylesheet" href="./styles/styles.css">
-        <link rel="stylesheet" href="./styles/cart.css">
-    </head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/cart.css">
+    <meta name="description" content="Your one-stop shop for the most delicious popcorn! Explore our classic flavors, drinks, and DIY kits. Freshly popped joy, delivered.">
+    <meta name="keywords" content="popcorn, ecommerce, snacks, movie night, caramel popcorn, buttery popcorn, DIY popcorn">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Popcorn...? - The Best Popcorn in Town">
+    <meta property="og:description" content="Your one-stop shop for the most delicious popcorn! Explore our classic flavors, drinks, and DIY kits.">
+    <meta property="og:image" content="images/pA.jpg">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Popcorn...? - The Best Popcorn in Town">
+    <meta property="twitter:description" content="Your one-stop shop for the most delicious popcorn! Explore our classic flavors, drinks, and DIY kits.">
+    <meta property="twitter:image" content="images/pA.jpg">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ED71CZC4S3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
 
-    <body>
-      <header class="main-header">
-            <nav class="main-nav">
-              <div class="nav-left">
-                <a href="index.html" class="nav-logo" aria-label="Homepage">
-                  <img src="images/logo.svg" alt="Site Logo">
-                </a>
-              </div>
-
-              <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-                <span class="hamburger-icon"></span>
-                <span class="hamburger-icon"></span>
-                <span class="hamburger-icon"></span>
-            </button>
-    
-            <div class="nav-center" id="main-navigation">
-                <ul>
-                  <li>
-                    <a href="about.html">
-                      <img src="images/nav1.png" alt="" class="mobile-nav-icon"> About Us
-                    </a>
-                  </li>
-                  <li>
-                    <a href="catalogue.html">
-                       <img src="images/nav2.png" alt="" class="mobile-nav-icon"> Products
-                    </a>
-                  </li>
-                  <li>
-                    <a href="news.html">
-                       <img src="images/nav3.png" alt="" class="mobile-nav-icon"> News
-                     </a>
-                  </li>
-                  <li>
-                    <a href="faq.html">
-                       <img src="images/nav4.png" alt="" class="mobile-nav-icon"> FAQ
-                    </a>
-                  </li>
-                  <li>
-                    <a href="career.html">
-                       <img src="images/nav5.png" alt="" class="mobile-nav-icon"> Careers
-                     </a>
-                  </li>
-                </ul>
-              </div>
-
-              <div class="nav-right">
-                <a href="login.html" class="nav-icon" aria-label="Login">
-                  <img src="images/user.png" alt="Login Icon">
-                </a>
-                <a href="cart.html" class="nav-icon" aria-label="Shopping Cart">
-                  <img src="images/cart.png" alt="Cart Icon">
-                </a>
-              </div>
-            </nav>
-        </header>
-
-        <main class="cart-page-main">
-            <div class="cart-page-container">
-    
-                <section class="main-cart-area">
-                    <h1>Your Shopping Cart</h1>
-                    <div class="cart-items-detailed" id="cart-items-detailed-list">
-                        <p id="cart-detailed-empty-message">Your cart is empty.</p> </div>
-                    <div class="cart-summary-detailed">
-                        <div class="cart-total-detailed">
-                            <span>Total:</span>
-                            <span id="cart-total-price-detailed">$0.00</span>
-                        </div>
-                        <button class="button checkout-btn-detailed" id="checkout-btn-detailed">Proceed to Checkout</button>
-                    </div>
-                </section>
-    
-                <aside class="suggested-items-area">
-                    <h2>You might also like...</h2>
-                    <div class="suggestions-list" id="suggestions-list">
-                        </div>
-                </aside>
-    
-            </div> </main>
-        
-        <script src="./scripts/main.js"></script>
-        <script src="./scripts/cart.js"></script>
-    </body>
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-ED71CZC4S3');
+    </script>
+  </head>
+  <body>
+    <header class="main-header">
+      <nav class="main-nav">
+        <div class="nav-left">
+          <a href="index.html" class="nav-logo" aria-label="Homepage">
+            <img src="images/logo.svg" alt="Site Logo">
+          </a>
+        </div>
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-icon"></span>
+          <span class="hamburger-icon"></span>
+          <span class="hamburger-icon"></span>
+        </button>
+        <div class="nav-center" id="main-navigation">
+          <ul>
+            <li>
+              <a href="about.html">
+                <img src="images/nav1.png" alt="" class="mobile-nav-icon"> About Us </a>
+            </li>
+            <li>
+              <a href="catalogue.html">
+                <img src="images/nav2.png" alt="" class="mobile-nav-icon"> Products </a>
+            </li>
+            <li>
+              <a href="news.html">
+                <img src="images/nav3.png" alt="" class="mobile-nav-icon"> News </a>
+            </li>
+            <li>
+              <a href="faq.html">
+                <img src="images/nav4.png" alt="" class="mobile-nav-icon"> FAQ </a>
+            </li>
+            <li>
+              <a href="career.html">
+                <img src="images/nav5.png" alt="" class="mobile-nav-icon"> Careers </a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-right">
+          <a href="login.html" class="nav-icon" aria-label="Login">
+            <img src="images/user.png" alt="Login Icon">
+          </a>
+          <a href="cart.html" class="nav-icon" aria-label="Shopping Cart">
+            <img src="images/cart.png" alt="Cart Icon">
+          </a>
+        </div>
+      </nav>
+    </header>
+    <main class="cart-page-main">
+      <div class="cart-page-container">
+        <section class="main-cart-area">
+          <h1>Your Shopping Cart</h1>
+          <div class="cart-items-detailed" id="cart-items-detailed-list">
+            <p id="cart-detailed-empty-message">Your cart is empty.</p>
+          </div>
+          <div class="cart-summary-detailed">
+            <div class="cart-total-detailed">
+              <span>Total:</span>
+              <span id="cart-total-price-detailed">$0.00</span>
+            </div>
+            <button class="button checkout-btn-detailed" id="checkout-btn-detailed">Proceed to Checkout</button>
+          </div>
+        </section>
+        <aside class="suggested-items-area">
+          <h2>You might also like...</h2>
+          <div class="suggestions-list" id="suggestions-list"></div>
+        </aside>
+      </div>
+    </main>
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/cart.js"></script>
+    <script type="text/javascript">
+      var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+      (function() {
+        var s1 = document.createElement("script"),
+          s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/68e87032c312bc194e49af7e/1j75vci5v';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+      })();
+    </script>
+  </body>
 </html>

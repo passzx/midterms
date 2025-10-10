@@ -1,209 +1,221 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>FAQ - Frequently Asked Questions</title>
-        <link rel="stylesheet" href="./styles/styles.css">
-        <link rel="stylesheet" href="./styles/faq.css">
-    </head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Frequently Asked Questions</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/faq.css">
+    <meta name="description" content="Your one-stop shop for the most delicious popcorn! Explore our classic flavors, drinks, and DIY kits. Freshly popped joy, delivered.">
+    <meta name="keywords" content="popcorn, ecommerce, snacks, movie night, caramel popcorn, buttery popcorn, DIY popcorn">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Popcorn...? - The Best Popcorn in Town">
+    <meta property="og:description" content="Your one-stop shop for the most delicious popcorn! Explore our classic flavors, drinks, and DIY kits.">
+    <meta property="og:image" content="images/pA.jpg">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Popcorn...? - The Best Popcorn in Town">
+    <meta property="twitter:description" content="Your one-stop shop for the most delicious popcorn! Explore our classic flavors, drinks, and DIY kits.">
+    <meta property="twitter:image" content="images/pA.jpg">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ED71CZC4S3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
 
-    <body>
-      <header class="main-header">
-            <nav class="main-nav">
-              <div class="nav-left">
-                <a href="index.html" class="nav-logo" aria-label="Homepage">
-                  <img src="images/logo.svg" alt="Site Logo">
-                </a>
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-ED71CZC4S3');
+    </script>
+  </head>
+  <body>
+    <header class="main-header">
+      <nav class="main-nav">
+        <div class="nav-left">
+          <a href="index.html" class="nav-logo" aria-label="Homepage">
+            <img src="images/logo.svg" alt="Site Logo">
+          </a>
+        </div>
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-icon"></span>
+          <span class="hamburger-icon"></span>
+          <span class="hamburger-icon"></span>
+        </button>
+        <div class="nav-center" id="main-navigation">
+          <ul>
+            <li>
+              <a href="about.html">
+                <img src="images/nav1.png" alt="" class="mobile-nav-icon"> About Us </a>
+            </li>
+            <li>
+              <a href="catalogue.html">
+                <img src="images/nav2.png" alt="" class="mobile-nav-icon"> Products </a>
+            </li>
+            <li>
+              <a href="news.html">
+                <img src="images/nav3.png" alt="" class="mobile-nav-icon"> News </a>
+            </li>
+            <li>
+              <a href="faq.html">
+                <img src="images/nav4.png" alt="" class="mobile-nav-icon"> FAQ </a>
+            </li>
+            <li>
+              <a href="career.html">
+                <img src="images/nav5.png" alt="" class="mobile-nav-icon"> Careers </a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-right">
+          <a href="login.html" class="nav-icon" aria-label="Login">
+            <img src="images/user.png" alt="Login Icon">
+          </a>
+          <a href="cart.html" class="nav-icon" aria-label="Shopping Cart">
+            <img src="images/cart.png" alt="Cart Icon">
+          </a>
+        </div>
+      </nav>
+    </header>
+    <main class="faq-page-main">
+      <div class="faq-layout-container">
+        <div class="faq-content-area">
+          <h1>Frequently Asked Questions</h1>
+          <section id="faq-ordering" class="faq-category">
+            <h2>
+              <img src="images/cart.png" alt="Cart Icon" class="faq-category-icon"> Ordering & Cart
+            </h2>
+            <details class="faq-item">
+              <summary class="faq-question">How do I add items to my cart?</summary>
+              <div class="faq-answer">
+                <p>To add items, please visit our Products page. Click on any product you're interested in to see more details or options. Once you've selected the size (if applicable) and quantity in the pop-up window or product page, click the "Add to Cart" button. Your item will then appear in the cart panel!</p>
               </div>
-
-              <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-                <span class="hamburger-icon"></span>
-                <span class="hamburger-icon"></span>
-                <span class="hamburger-icon"></span>
-            </button>
-    
-            <div class="nav-center" id="main-navigation">
-                <ul>
-                  <li>
-                    <a href="about.html">
-                      <img src="images/nav1.png" alt="" class="mobile-nav-icon"> About Us
-                    </a>
-                  </li>
-                  <li>
-                    <a href="catalogue.html">
-                       <img src="images/nav2.png" alt="" class="mobile-nav-icon"> Products
-                    </a>
-                  </li>
-                  <li>
-                    <a href="news.html">
-                       <img src="images/nav3.png" alt="" class="mobile-nav-icon"> News
-                     </a>
-                  </li>
-                  <li>
-                    <a href="faq.html">
-                       <img src="images/nav4.png" alt="" class="mobile-nav-icon"> FAQ
-                    </a>
-                  </li>
-                  <li>
-                    <a href="career.html">
-                       <img src="images/nav5.png" alt="" class="mobile-nav-icon"> Careers
-                     </a>
-                  </li>
-                </ul>
+            </details>
+            <details class="faq-item">
+              <summary class="faq-question">How can I change item quantities in my cart?</summary>
+              <div class="faq-answer">
+                <p>Quantity adjustments can be made on the main Cart page (cart.html). Each item listed in your cart will have '+' and '-' buttons next to its quantity, allowing you to increase or decrease the amount easily. You can also type a number directly into the quantity box.</p>
               </div>
-
-              <div class="nav-right">
-                <a href="login.html" class="nav-icon" aria-label="Login">
-                  <img src="images/user.png" alt="Login Icon">
-                </a>
-                <a href="cart.html" class="nav-icon" aria-label="Shopping Cart">
-                  <img src="images/cart.png" alt="Cart Icon">
-                </a>
+            </details>
+            <details class="faq-item">
+              <summary class="faq-question">How do I remove an item from my cart?</summary>
+              <div class="faq-answer">
+                <p>On both the Products page side-cart and the main Cart page, each item listed has a small '×' button. Clicking this button will remove the item directly from your cart.</p>
               </div>
-            </nav>
-        </header>
-
-        <main class="faq-page-main">
-            <div class="faq-layout-container">
-    
-                <div class="faq-content-area">
-                    <h1>Frequently Asked Questions</h1>
-    
-                <section id="faq-ordering" class="faq-category">
-                    <h2><img src="images/cart.png" alt="Cart Icon" class="faq-category-icon"> Ordering & Cart</h2>
-    
-                    <details class="faq-item">
-                        <summary class="faq-question">How do I add items to my cart?</summary>
-                        <div class="faq-answer">
-                            <p>To add items, please visit our Products page. Click on any product you're interested in to see more details or options. Once you've selected the size (if applicable) and quantity in the pop-up window or product page, click the "Add to Cart" button. Your item will then appear in the cart panel!</p>
-                        </div>
-                    </details>
-    
-                    <details class="faq-item">
-                        <summary class="faq-question">How can I change item quantities in my cart?</summary>
-                        <div class="faq-answer">
-                            <p>Quantity adjustments can be made on the main Cart page (cart.html). Each item listed in your cart will have '+' and '-' buttons next to its quantity, allowing you to increase or decrease the amount easily. You can also type a number directly into the quantity box.</p>
-                        </div>
-                    </details>
-    
-                    <details class="faq-item">
-                        <summary class="faq-question">How do I remove an item from my cart?</summary>
-                        <div class="faq-answer">
-                            <p>On both the Products page side-cart and the main Cart page, each item listed has a small '×' button. Clicking this button will remove the item directly from your cart.</p>
-                        </div>
-                    </details>
-
-                    <details class="faq-item">
-                        <summary class="faq-question">Can I order deals like "Night For 2" more than once?</summary>
-                        <div class="faq-answer">
-                            <p>Currently, our system limits deals like "Night For 2" and "Solo Watcher" to one per order to ensure availability. However, you can adjust the quantity for the "Seasoned Popcorn Maker" deal directly in your cart!</p>
-                        </div>
-                    </details>
-
-                    <details class="faq-item">
-                        <summary class="faq-question">I added an item but don't see it in the cart panel.</summary>
-                        <div class="faq-answer">
-                            <p>Please ensure you clicked the "Add to Cart" button after selecting your options in the pop-up window or product page. If the issue persists, try refreshing the page. The cart uses your browser's localStorage, which should update instantly.</p>
-                        </div>
-                    </details>
-
-                    <details class="faq-item">
-                        <summary class="faq-question">Does the cart save if I close the browser?</summary>
-                        <div class="faq-answer">
-                            <p>Yes, items added to your cart are saved in your browser's localStorage, so they should still be there if you close and reopen the browser. However, this is specific to the browser and computer you used.</p>
-                        </div>
-                    </details>
-    
-                </section>
-    
-                <section id="faq-products" class="faq-category">
-                    <h2><img src="images/popcorn.png" alt="Popcorn Icon" class="faq-category-icon">Products & Options</h2>
-    
-                    <details class="faq-item">
-                        <summary class="faq-question">What sizes are available for popcorn?</summary>
-                        <div class="faq-answer">
-                            <p>Our standard popcorn flavors (Buttery Classic, Caramel Bliss, Spicy Chili, Cheesy Cheddar) are available in 64oz, 105oz, and 170oz.</p>
-                        </div>
-                    </details>
-    
-                    <details class="faq-item">
-                        <summary class="faq-question">What sizes do the drinks come in?</summary>
-                        <div class="faq-answer">
-                            <p>All our soft drinks (Cola, Iced Tea, Orange Juice, Water) come in 21oz, 30oz, and 42oz sizes.</p>
-                        </div>
-                    </details>
-    
-                     <details class="faq-item">
-                        <summary class="faq-question">Do the DIY Kits have different sizes?</summary>
-                        <div class="faq-answer">
-                            <p>No, our DIY Kits come in one standard size and do not have size options.</p>
-                        </div>
-                    </details>
-
-                    <details class="faq-item">
-                        <summary class="faq-question">Are the DIY Kits suitable for beginners?</summary>
-                        <div class="faq-answer">
-                            <p>Yes! The Popcorn Kernel Kit simply provides quality kernels for popping using your preferred method (stovetop, air popper, etc.). The Seasoning Sampler lets you easily experiment with different flavors on your finished popcorn.</p>
-                        </div>
-                    </details>
-
-                    <details class="faq-item">
-                        <summary class="faq-question">Where can I find more detailed information about specific products?</summary>
-                        <div class="faq-answer">
-                            <p>For our Popcorn, Kernel Kit, and Seasoning Sampler, you can click the "View Full Details" link found on their respective pop-up details window (accessed from the Products page) to visit their dedicated pages.</p>
-                        </div>
-                    </details>
-    
-                </section>
-    
-                <section id="faq-account" class="faq-category">
-                    <h2><img src="images/user.png" alt="User Icon" class="faq-category-icon">Account (Simulated)</h2>
-                    <details class="faq-item">
-                        <summary class="faq-question">How is my account data stored?</summary>
-                        <div class="faq-answer">
-                            <p>For this website project, user account details (username, password, phone number) are stored directly in your browser's `localStorage`. This is a simulation technique and means the data is only stored on your current computer and browser; it is not sent to or stored on a central server.</p>
-                        </div>
-                    </details>
-
-                    <details class="faq-item">
-                        <summary class="faq-question">What happens if I "Forget Password"?</summary>
-                        <div class="faq-answer">
-                            <p>Since this is a simulation, the "Forgot Password" link provides an option to clear all simulated account data currently stored in your browser's `localStorage`. This allows you to 'reset' the accounts for testing purposes.</p>
-                        </div>
-                    </details>
-
-                    <details class="faq-item">
-                        <summary class="faq-question">What happens when I log out?</summary>
-                        <div class="faq-answer">
-                            <p>Logging out clears your logged-in status for the current browser session (sessionStorage). Your account information remains saved in localStorage so you can log back in later on the same browser.</p>
-                        </div>
-                    </details>
-
-                    <details class="faq-item">
-                        <summary class="faq-question">Could you have linked the cart details to each account instead of not linking them at all?</summary>
-                        <div class="faq-answer">
-                            <p>True, but I'm doing all of this by myself. The separate systems are good enough. I think.</p>
-                        </div>
-                    </details>
-
-                </section>
-
-                </div> <aside class="faq-contents-bar">
-                    <h3>Contents</h3>
-                    <ul>
-                        <li><a href="#faq-ordering">Ordering & Cart</a></li>
-                        <li><a href="#faq-products">Products & Options</a></li>
-                        <li><a href="#faq-account">Account (Simulated)</a></li>
-                    </ul>
-                </aside>
-
-                </div> </main>
-
-        <footer class="main-footer">
-            <p class="quote">"I'm not built for this much thinking" - Me, 5 minutes after I declared that I want to do this assignment on my own</p>
-        </footer>
-
-        <script src="./scripts/main.js"></script>
-    </body>
+            </details>
+            <details class="faq-item">
+              <summary class="faq-question">Can I order deals like "Night For 2" more than once?</summary>
+              <div class="faq-answer">
+                <p>Currently, our system limits deals like "Night For 2" and "Solo Watcher" to one per order to ensure availability. However, you can adjust the quantity for the "Seasoned Popcorn Maker" deal directly in your cart!</p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary class="faq-question">I added an item but don't see it in the cart panel.</summary>
+              <div class="faq-answer">
+                <p>Please ensure you clicked the "Add to Cart" button after selecting your options in the pop-up window or product page. If the issue persists, try refreshing the page. The cart uses your browser's localStorage, which should update instantly.</p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary class="faq-question">Does the cart save if I close the browser?</summary>
+              <div class="faq-answer">
+                <p>Yes, items added to your cart are saved in your browser's localStorage, so they should still be there if you close and reopen the browser. However, this is specific to the browser and computer you used.</p>
+              </div>
+            </details>
+          </section>
+          <section id="faq-products" class="faq-category">
+            <h2>
+              <img src="images/popcorn.png" alt="Popcorn Icon" class="faq-category-icon">Products & Options
+            </h2>
+            <details class="faq-item">
+              <summary class="faq-question">What sizes are available for popcorn?</summary>
+              <div class="faq-answer">
+                <p>Our standard popcorn flavors (Buttery Classic, Caramel Bliss, Spicy Chili, Cheesy Cheddar) are available in 64oz, 105oz, and 170oz.</p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary class="faq-question">What sizes do the drinks come in?</summary>
+              <div class="faq-answer">
+                <p>All our soft drinks (Cola, Iced Tea, Orange Juice, Water) come in 21oz, 30oz, and 42oz sizes.</p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary class="faq-question">Do the DIY Kits have different sizes?</summary>
+              <div class="faq-answer">
+                <p>No, our DIY Kits come in one standard size and do not have size options.</p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary class="faq-question">Are the DIY Kits suitable for beginners?</summary>
+              <div class="faq-answer">
+                <p>Yes! The Popcorn Kernel Kit simply provides quality kernels for popping using your preferred method (stovetop, air popper, etc.). The Seasoning Sampler lets you easily experiment with different flavors on your finished popcorn.</p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary class="faq-question">Where can I find more detailed information about specific products?</summary>
+              <div class="faq-answer">
+                <p>For our Popcorn, Kernel Kit, and Seasoning Sampler, you can click the "View Full Details" link found on their respective pop-up details window (accessed from the Products page) to visit their dedicated pages.</p>
+              </div>
+            </details>
+          </section>
+          <section id="faq-account" class="faq-category">
+            <h2>
+              <img src="images/user.png" alt="User Icon" class="faq-category-icon">Account (Simulated)
+            </h2>
+            <details class="faq-item">
+              <summary class="faq-question">How is my account data stored?</summary>
+              <div class="faq-answer">
+                <p>For this website project, user account details (username, password, phone number) are stored directly in your browser's `localStorage`. This is a simulation technique and means the data is only stored on your current computer and browser; it is not sent to or stored on a central server.</p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary class="faq-question">What happens if I "Forget Password"?</summary>
+              <div class="faq-answer">
+                <p>Since this is a simulation, the "Forgot Password" link provides an option to clear all simulated account data currently stored in your browser's `localStorage`. This allows you to 'reset' the accounts for testing purposes.</p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary class="faq-question">What happens when I log out?</summary>
+              <div class="faq-answer">
+                <p>Logging out clears your logged-in status for the current browser session (sessionStorage). Your account information remains saved in localStorage so you can log back in later on the same browser.</p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary class="faq-question">Could you have linked the cart details to each account instead of not linking them at all?</summary>
+              <div class="faq-answer">
+                <p>True, but I'm doing all of this by myself. The separate systems are good enough. I think.</p>
+              </div>
+            </details>
+          </section>
+        </div>
+        <aside class="faq-contents-bar">
+          <h3>Contents</h3>
+          <ul>
+            <li>
+              <a href="#faq-ordering">Ordering & Cart</a>
+            </li>
+            <li>
+              <a href="#faq-products">Products & Options</a>
+            </li>
+            <li>
+              <a href="#faq-account">Account (Simulated)</a>
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </main>
+    <footer class="main-footer">
+      <p class="quote">"I'm not built for this much thinking" - Me, 5 minutes after I declared that I want to do this assignment on my own</p>
+    </footer>
+    <script src="./scripts/main.js"></script>
+    <script type="text/javascript">
+      var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+      (function() {
+        var s1 = document.createElement("script"),
+          s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/68e87032c312bc194e49af7e/1j75vci5v';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+      })();
+    </script>
+  </body>
 </html>

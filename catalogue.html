@@ -1,166 +1,171 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/catalogue.css">
+    <meta name="description" content="Your one-stop shop for the most delicious popcorn! Explore our classic flavors, drinks, and DIY kits. Freshly popped joy, delivered.">
+    <meta name="keywords" content="popcorn, ecommerce, snacks, movie night, caramel popcorn, buttery popcorn, DIY popcorn">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Popcorn...? - The Best Popcorn in Town">
+    <meta property="og:description" content="Your one-stop shop for the most delicious popcorn! Explore our classic flavors, drinks, and DIY kits.">
+    <meta property="og:image" content="images/pA.jpg">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Popcorn...? - The Best Popcorn in Town">
+    <meta property="twitter:description" content="Your one-stop shop for the most delicious popcorn! Explore our classic flavors, drinks, and DIY kits.">
+    <meta property="twitter:image" content="images/pA.jpg">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ED71CZC4S3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Products</title>
-  <link rel="stylesheet" href="./styles/styles.css">
-  <link rel="stylesheet" href="./styles/catalogue.css">
-</head>
-
-<body>
-  <header class="main-header">
-    <nav class="main-nav">
-      <div class="nav-left">
-        <a href="index.html" class="nav-logo" aria-label="Homepage">
-          <img src="images/logo.svg" alt="Site Logo">
-        </a>
-      </div>
-
-      <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-        <span class="hamburger-icon"></span>
-        <span class="hamburger-icon"></span>
-        <span class="hamburger-icon"></span>
-    </button>
-
-    <div class="nav-center" id="main-navigation">
-        <ul>
-          <li>
-            <a href="about.html">
-              <img src="images/nav1.png" alt="" class="mobile-nav-icon"> About Us
-            </a>
-          </li>
-          <li>
-            <a href="catalogue.html">
-               <img src="images/nav2.png" alt="" class="mobile-nav-icon"> Products
-            </a>
-          </li>
-          <li>
-            <a href="news.html">
-               <img src="images/nav3.png" alt="" class="mobile-nav-icon"> News
-             </a>
-          </li>
-          <li>
-            <a href="faq.html">
-               <img src="images/nav4.png" alt="" class="mobile-nav-icon"> FAQ
-            </a>
-          </li>
-          <li>
-            <a href="career.html">
-               <img src="images/nav5.png" alt="" class="mobile-nav-icon"> Careers
-             </a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="nav-right">
-        <a href="login.html" class="nav-icon" aria-label="Login">
-          <img src="images/user.png" alt="Login Icon">
-        </a>
-        <a href="cart.html" class="nav-icon" aria-label="Shopping Cart">
-          <img src="images/cart.png" alt="Cart Icon">
-        </a>
-      </div>
-    </nav>
-  </header>
-
-  <main class="catalogue-main">
-    <div class="catalogue-container">
-
-      <section class="cart-panel" id="cart-panel">
-        <h2>Your Cart</h2>
-        <div class="cart-items" id="cart-items-list">
-          <p id="cart-empty-message">Your cart is empty.</p>
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-ED71CZC4S3');
+    </script>
+  </head>
+  <body>
+    <header class="main-header">
+      <nav class="main-nav">
+        <div class="nav-left">
+          <a href="index.html" class="nav-logo" aria-label="Homepage">
+            <img src="images/logo.svg" alt="Site Logo">
+          </a>
         </div>
-        <div class="cart-summary">
-          <div class="cart-total">
-            <span>Total:</span>
-            <span id="cart-total-price">$0.00</span>
-          </div>
-          <button class="button checkout-btn" id="checkout-btn">Checkout</button>
-        </div>
-      </section>
-
-      <section class="product-panel" id="product-panel">
-        <nav class="product-nav" id="product-nav">
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-icon"></span>
+          <span class="hamburger-icon"></span>
+          <span class="hamburger-icon"></span>
+        </button>
+        <div class="nav-center" id="main-navigation">
           <ul>
-            <li><a href="#category-deals"><img src="images/p_category_1.png" alt=""> Today's Deals</a></li>
-            <li><a href="#category-popcorn"><img src="images/p_category_2.png" alt=""> Popcorn</a></li>
-            <li><a href="#category-drinks"><img src="images/p_category_3.png" alt=""> Drinks</a></li>
-            <li><a href="#category-diy"><img src="images/p_category_4.png" alt=""> DIY Kits</a></li>
+            <li>
+              <a href="about.html">
+                <img src="images/nav1.png" alt="" class="mobile-nav-icon"> About Us </a>
+            </li>
+            <li>
+              <a href="catalogue.html">
+                <img src="images/nav2.png" alt="" class="mobile-nav-icon"> Products </a>
+            </li>
+            <li>
+              <a href="news.html">
+                <img src="images/nav3.png" alt="" class="mobile-nav-icon"> News </a>
+            </li>
+            <li>
+              <a href="faq.html">
+                <img src="images/nav4.png" alt="" class="mobile-nav-icon"> FAQ </a>
+            </li>
+            <li>
+              <a href="career.html">
+                <img src="images/nav5.png" alt="" class="mobile-nav-icon"> Careers </a>
+            </li>
           </ul>
-        </nav>
-
-        <div class="product-list" id="product-list">
-          <section id="category-deals" class="product-category">
-            <h3>Today's Deals</h3>
-            <div class="products-grid">
-            </div>
-          </section>
-          <section id="category-popcorn" class="product-category">
-            <h3>Popcorn</h3>
-            <div class="products-grid">
-            </div>
-          </section>
-          <section id="category-drinks" class="product-category">
-            <h3>Drinks</h3>
-            <div class="products-grid">
-            </div>
-          </section>
-          <section id="category-diy" class="product-category">
-            <h3>DIY Kits</h3>
-            <div class="products-grid">
-            </div>
-          </section>
         </div>
-      </section>
-
-    </div>
-    <div class="product-detail-modal" id="product-detail-modal">
-      <button class="modal-close-btn" id="modal-close-btn" type="button">&times;</button>
-      <div class="modal-content">
-        <img src="" alt="Product Image" id="modal-product-image" class="modal-product-image">
-        <div class="modal-product-info">
-          <h3 id="modal-product-name">Product Name</h3>
-          <div id="modal-detail-link-container"></div>
-          <p id="modal-product-description">Product description goes here...</p>
-          <form id="modal-options-form">
-            <fieldset class="size-options">
-              <legend>Choose Size:</legend>
-            </fieldset>
-
-            <div class="deal-choice-container" style="display: none;">
-              <label for="modal-deal-popcorn-choice">Choose Popcorn:</label>
-              <select id="modal-deal-popcorn-choice" style="font-family: Cabin" name="popcornChoice">
-              </select>
+        <div class="nav-right">
+          <a href="login.html" class="nav-icon" aria-label="Login">
+            <img src="images/user.png" alt="Login Icon">
+          </a>
+          <a href="cart.html" class="nav-icon" aria-label="Shopping Cart">
+            <img src="images/cart.png" alt="Cart Icon">
+          </a>
+        </div>
+      </nav>
+    </header>
+    <main class="catalogue-main">
+      <div class="catalogue-container">
+        <section class="cart-panel" id="cart-panel">
+          <h2>Your Cart</h2>
+          <div class="cart-items" id="cart-items-list">
+            <p id="cart-empty-message">Your cart is empty.</p>
+          </div>
+          <div class="cart-summary">
+            <div class="cart-total">
+              <span>Total:</span>
+              <span id="cart-total-price">$0.00</span>
             </div>
-
-            <div class="deal-choice-container" style="display: none;">
-              <label for="modal-deal-drink-choice">Choose Drink:</label>
-              <select id="modal-deal-drink-choice" style="font-family: Cabin" name="drinkChoice">
-              </select>
-            </div>
-
-            <div class="quantity-picker" style="display: flex;"> <label for="modal-quantity">Quantity:</label>
-              <button type="button" class="quantity-btn minus" id="modal-qty-minus">-</button>
-              <input type="number" id="modal-quantity" name="quantity" value="1" min="1" step="1">
-              <button type="button" class="quantity-btn plus" id="modal-qty-plus">+</button>
-            </div>
-
-            <div class="modal-price-display">
-              Price: <span id="modal-current-price">$0.00</span>
-            </div>
-            <button type="submit" class="button add-to-cart-btn" id="modal-add-to-cart-btn">Add to Cart</button>
-          </form>
+            <button class="button checkout-btn" id="checkout-btn">Checkout</button>
+          </div>
+        </section>
+        <section class="product-panel" id="product-panel">
+          <nav class="product-nav" id="product-nav">
+            <ul>
+              <li>
+                <a href="#category-deals">
+                  <img src="images/p_category_1.png" alt=""> Today's Deals </a>
+              </li>
+              <li>
+                <a href="#category-popcorn">
+                  <img src="images/p_category_2.png" alt=""> Popcorn </a>
+              </li>
+              <li>
+                <a href="#category-drinks">
+                  <img src="images/p_category_3.png" alt=""> Drinks </a>
+              </li>
+              <li>
+                <a href="#category-diy">
+                  <img src="images/p_category_4.png" alt=""> DIY Kits </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="product-list" id="product-list">
+            <section id="category-deals" class="product-category">
+              <h3>Today's Deals</h3>
+              <div class="products-grid"></div>
+            </section>
+            <section id="category-popcorn" class="product-category">
+              <h3>Popcorn</h3>
+              <div class="products-grid"></div>
+            </section>
+            <section id="category-drinks" class="product-category">
+              <h3>Drinks</h3>
+              <div class="products-grid"></div>
+            </section>
+            <section id="category-diy" class="product-category">
+              <h3>DIY Kits</h3>
+              <div class="products-grid"></div>
+            </section>
+          </div>
+        </section>
+      </div>
+      <div class="product-detail-modal" id="product-detail-modal">
+        <button class="modal-close-btn" id="modal-close-btn" type="button">&times;</button>
+        <div class="modal-content">
+          <img src="" alt="Product Image" id="modal-product-image" class="modal-product-image">
+          <div class="modal-product-info">
+            <h3 id="modal-product-name">Product Name</h3>
+            <div id="modal-detail-link-container"></div>
+            <p id="modal-product-description">Product description goes here...</p>
+            <form id="modal-options-form">
+              <fieldset class="size-options">
+                <legend>Choose Size:</legend>
+              </fieldset>
+              <div class="deal-choice-container" style="display: none;">
+                <label for="modal-deal-popcorn-choice">Choose Popcorn:</label>
+                <select id="modal-deal-popcorn-choice" style="font-family: Cabin" name="popcornChoice"></select>
+              </div>
+              <div class="deal-choice-container" style="display: none;">
+                <label for="modal-deal-drink-choice">Choose Drink:</label>
+                <select id="modal-deal-drink-choice" style="font-family: Cabin" name="drinkChoice"></select>
+              </div>
+              <div class="quantity-picker" style="display: flex;">
+                <label for="modal-quantity">Quantity:</label>
+                <button type="button" class="quantity-btn minus" id="modal-qty-minus">-</button>
+                <input type="number" id="modal-quantity" name="quantity" value="1" min="1" step="1">
+                <button type="button" class="quantity-btn plus" id="modal-qty-plus">+</button>
+              </div>
+              <div class="modal-price-display"> Price: <span id="modal-current-price">$0.00</span>
+              </div>
+              <button type="submit" class="button add-to-cart-btn" id="modal-add-to-cart-btn">Add to Cart</button>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="modal-overlay" id="modal-overlay"></div>
-  </main>
-  
-  <script src="./scripts/main.js"></script>
-  <script src="./scripts/catalogue.js"></script>
-</body>
-
+      <div class="modal-overlay" id="modal-overlay"></div>
+    </main>
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/catalogue.js"></script>
+  </body>
 </html>

@@ -1,145 +1,126 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>User</title>
-  <link rel="stylesheet" href="./styles/styles.css">
-  <link rel="stylesheet" href="./styles/login.css">
-</head>
-
-<body>
-  <header class="main-header">
-    <nav class="main-nav">
-      <div class="nav-left">
-        <a href="index.html" class="nav-logo" aria-label="Homepage">
-          <img src="images/logo.svg" alt="Site Logo">
-        </a>
-      </div>
-
-      <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-        <span class="hamburger-icon"></span>
-        <span class="hamburger-icon"></span>
-        <span class="hamburger-icon"></span>
-    </button>
-
-    <div class="nav-center" id="main-navigation">
-        <ul>
-          <li>
-            <a href="about.html">
-              <img src="images/nav1.png" alt="" class="mobile-nav-icon"> About Us
-            </a>
-          </li>
-          <li>
-            <a href="catalogue.html">
-               <img src="images/nav2.png" alt="" class="mobile-nav-icon"> Products
-            </a>
-          </li>
-          <li>
-            <a href="news.html">
-               <img src="images/nav3.png" alt="" class="mobile-nav-icon"> News
-             </a>
-          </li>
-          <li>
-            <a href="faq.html">
-               <img src="images/nav4.png" alt="" class="mobile-nav-icon"> FAQ
-            </a>
-          </li>
-          <li>
-            <a href="career.html">
-               <img src="images/nav5.png" alt="" class="mobile-nav-icon"> Careers
-             </a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="nav-right">
-        <a href="login.html" class="nav-icon" aria-label="Login">
-          <img src="images/user.png" alt="Login Icon">
-        </a>
-        <a href="cart.html" class="nav-icon" aria-label="Shopping Cart">
-          <img src="images/cart.png" alt="Cart Icon">
-        </a>
-      </div>
-    </nav>
-  </header>
-  <main class="login-page-main">
-    <div class="login-container">
-      <div class="login-image-panel" id="login-image-panel">
-      </div>
-
-      <div class="login-form-panel">
-        <div class="form-toggle">
-          <button id="show-login-btn" class="toggle-btn active" type="button">Login</button>
-          <button id="show-register-btn" class="toggle-btn" type="button">Register</button>
-          <div class="active-indicator"></div>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/login.css">
+  </head>
+  <body>
+    <header class="main-header">
+      <nav class="main-nav">
+        <div class="nav-left">
+          <a href="index.html" class="nav-logo" aria-label="Homepage">
+            <img src="images/logo.svg" alt="Site Logo">
+          </a>
         </div>
-
-        <form id="login-form" class="auth-form active-form">
-          <h2>Login</h2>
-          <div class="form-group">
-            <label for="login-username">Username</label>
-            <input type="text" id="login-username" name="username" autocomplete="username" required>
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-icon"></span>
+          <span class="hamburger-icon"></span>
+          <span class="hamburger-icon"></span>
+        </button>
+        <div class="nav-center" id="main-navigation">
+          <ul>
+            <li>
+              <a href="about.html">
+                <img src="images/nav1.png" alt="" class="mobile-nav-icon"> About Us </a>
+            </li>
+            <li>
+              <a href="catalogue.html">
+                <img src="images/nav2.png" alt="" class="mobile-nav-icon"> Products </a>
+            </li>
+            <li>
+              <a href="news.html">
+                <img src="images/nav3.png" alt="" class="mobile-nav-icon"> News </a>
+            </li>
+            <li>
+              <a href="faq.html">
+                <img src="images/nav4.png" alt="" class="mobile-nav-icon"> FAQ </a>
+            </li>
+            <li>
+              <a href="career.html">
+                <img src="images/nav5.png" alt="" class="mobile-nav-icon"> Careers </a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-right">
+          <a href="login.html" class="nav-icon" aria-label="Login">
+            <img src="images/user.png" alt="Login Icon">
+          </a>
+          <a href="cart.html" class="nav-icon" aria-label="Shopping Cart">
+            <img src="images/cart.png" alt="Cart Icon">
+          </a>
+        </div>
+      </nav>
+    </header>
+    <main class="login-page-main">
+      <div class="login-container">
+        <div class="login-image-panel" id="login-image-panel"></div>
+        <div class="login-form-panel">
+          <div class="form-toggle">
+            <button id="show-login-btn" class="toggle-btn active" type="button">Login</button>
+            <button id="show-register-btn" class="toggle-btn" type="button">Register</button>
+            <div class="active-indicator"></div>
           </div>
-          <div class="form-group">
-            <label for="login-password">Password</label>
-            <input type="password" id="login-password" name="password" autocomplete="current-password" required>
-          </div>
-          <a href="#" id="forgot-password-link" class="forgot-password">Forgot your password?</a>
-          <button type="submit" class="button submit-btn">Login</button>
-          <p class="form-message" id="login-message"></p>
-        </form>
-
-        <form id="register-form" class="auth-form">
-          <h2>Register</h2>
-          <div class="form-group">
-            <label for="register-phone">Phone Number</label>
-            <input type="tel" id="register-phone" name="phone" autocomplete="tel" required>
-          </div>
-          <div class="form-group">
-            <label for="register-username">Username</label>
-            <input type="text" id="register-username" name="username" autocomplete="username" required>
-          </div>
-
-          <div class="form-row">
+          <form id="login-form" class="auth-form active-form">
+            <h2>Login</h2>
             <div class="form-group">
-              <label for="register-password">Password</label>
-              <input type="password" id="register-password" name="password" autocomplete="new-password" required>
+              <label for="login-username">Username</label>
+              <input type="text" id="login-username" name="username" autocomplete="username" required>
             </div>
             <div class="form-group">
-              <label for="register-repeat-password">Repeat Password</label>
-              <input type="password" id="register-repeat-password" name="repeatPassword" autocomplete="new-password" required>
+              <label for="login-password">Password</label>
+              <input type="password" id="login-password" name="password" autocomplete="current-password" required>
             </div>
-          </div>
-
-          <button type="submit" class="button submit-btn">Register</button>
-          <p class="form-message" id="register-message"></p>
-        </form>
-
-        <div id="user-info-panel" class="user-info-panel">
-          <h2>User Information</h2>
-          <div class="profile-header">
-            <img src="images/icon.png" alt="Profile Icon" class="profile-icon">
-            <div class="profile-details">
-              <span class="detail-label">Username:</span>
-              <span id="user-info-username" class="detail-value"></span>
-              <span class="detail-label">Phone:</span>
-              <span id="user-info-phone" class="detail-value"></span>
+            <a href="#" id="forgot-password-link" class="forgot-password">Forgot your password?</a>
+            <button type="submit" class="button submit-btn">Login</button>
+            <p class="form-message" id="login-message"></p>
+          </form>
+          <form id="register-form" class="auth-form">
+            <h2>Register</h2>
+            <div class="form-group">
+              <label for="register-phone">Phone Number</label>
+              <input type="tel" id="register-phone" name="phone" autocomplete="tel" required>
             </div>
+            <div class="form-group">
+              <label for="register-username">Username</label>
+              <input type="text" id="register-username" name="username" autocomplete="username" required>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="register-password">Password</label>
+                <input type="password" id="register-password" name="password" autocomplete="new-password" required>
+              </div>
+              <div class="form-group">
+                <label for="register-repeat-password">Repeat Password</label>
+                <input type="password" id="register-repeat-password" name="repeatPassword" autocomplete="new-password" required>
+              </div>
+            </div>
+            <button type="submit" class="button submit-btn">Register</button>
+            <p class="form-message" id="register-message"></p>
+          </form>
+          <div id="user-info-panel" class="user-info-panel">
+            <h2>User Information</h2>
+            <div class="profile-header">
+              <img src="images/icon.png" alt="Profile Icon" class="profile-icon">
+              <div class="profile-details">
+                <span class="detail-label">Username:</span>
+                <span id="user-info-username" class="detail-value"></span>
+                <span class="detail-label">Phone:</span>
+                <span id="user-info-phone" class="detail-value"></span>
+              </div>
+            </div>
+            <div class="user-actions">
+              <button id="logout-btn" type="button" class="button logout-btn">Logout</button>
+              <button id="delete-account-btn" type="button" class="button delete-btn">Delete Account</button>
+            </div>
+            <p class="form-message" id="user-info-message"></p>
           </div>
-          <div class="user-actions">
-            <button id="logout-btn" type="button" class="button logout-btn">Logout</button>
-            <button id="delete-account-btn" type="button" class="button delete-btn">Delete Account</button>
-          </div>
-          <p class="form-message" id="user-info-message"></p>
         </div>
       </div>
-    </div>
-  </main>
-  
-  <script src="./scripts/main.js"></script>
-  <script src="./scripts/login.js"></script>
-</body>
-
+    </main>
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/login.js"></script>
+  </body>
 </html>
