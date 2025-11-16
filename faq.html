@@ -1,20 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ - Frequently Asked Questions</title>
+    <title>FAQ - Các câu hỏi thường gặp</title>
     <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="./icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./icon/favicon-16x16.png">
+    <link rel="manifest" href="./icon/site.webmanifest">
+    <link rel="shortcut icon" href="./icon/favicon.ico">
     <link rel="stylesheet" href="./styles/faq.css">
-    <meta name="description" content="Your one-stop shop for the most delicious popcorn! Explore our classic flavors, drinks, and DIY kits. Freshly popped joy, delivered.">
-    <meta name="keywords" content="popcorn, ecommerce, snacks, movie night, caramel popcorn, buttery popcorn, DIY popcorn">
+    <meta name="description" content="Cửa hàng tổng hợp của bạn cho món bắp rang bơ ngon nhất! Khám phá các hương vị cổ điển, đồ uống và bộ dụng cụ DIY của chúng tôi. Niềm vui bùng nổ, được giao tận nơi.">
+    <meta name="keywords" content="bắp rang bơ, ecommerce, đồ ăn vặt, xem phim, bắp rang caramen, bắp rang bơ, bắp rang tự làm">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Popcorn...? - The Best Popcorn in Town">
-    <meta property="og:description" content="Your one-stop shop for the most delicious popcorn! Explore our classic flavors, drinks, and DIY kits.">
+    <meta property="og:title" content="Popcorn...? - Bắp rang bơ ngon nhất">
+    <meta property="og:description" content="Cửa hàng tổng hợp của bạn cho món bắp rang bơ ngon nhất! Khám phá các hương vị cổ điển, đồ uống và bộ dụng cụ DIY.">
     <meta property="og:image" content="images/pA.jpg">
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="Popcorn...? - The Best Popcorn in Town">
-    <meta property="twitter:description" content="Your one-stop shop for the most delicious popcorn! Explore our classic flavors, drinks, and DIY kits.">
+    <meta property="twitter:title" content="Popcorn...? - Bắp rang bơ ngon nhất">
+    <meta property="twitter:description" content="Cửa hàng tổng hợp của bạn cho món bắp rang bơ ngon nhất! Khám phá các hương vị cổ điển, đồ uống và bộ dụng cụ DIY.">
     <meta property="twitter:image" content="images/pA.jpg">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ED71CZC4S3"></script>
     <script>
@@ -31,11 +36,11 @@
     <header class="main-header">
       <nav class="main-nav">
         <div class="nav-left">
-          <a href="index.html" class="nav-logo" aria-label="Homepage">
+          <a href="index.html" class="nav-logo" aria-label="Trang chủ">
             <img src="images/logo.svg" alt="Site Logo">
           </a>
         </div>
-        <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <button class="mobile-nav-toggle" aria-label="Mở/đóng menu điều hướng" aria-expanded="false">
           <span class="hamburger-icon"></span>
           <span class="hamburger-icon"></span>
           <span class="hamburger-icon"></span>
@@ -44,31 +49,35 @@
           <ul>
             <li>
               <a href="about.html">
-                <img src="images/nav1.png" alt="" class="mobile-nav-icon"> About Us </a>
+                <img src="images/nav1.png" alt="" class="mobile-nav-icon"> Về chúng tôi </a>
             </li>
             <li>
               <a href="catalogue.html">
-                <img src="images/nav2.png" alt="" class="mobile-nav-icon"> Products </a>
+                <img src="images/nav2.png" alt="" class="mobile-nav-icon"> Sản phẩm </a>
             </li>
             <li>
               <a href="news.html">
-                <img src="images/nav3.png" alt="" class="mobile-nav-icon"> News </a>
+                <img src="images/nav3.png" alt="" class="mobile-nav-icon"> Tin tức </a>
             </li>
             <li>
               <a href="faq.html">
-                <img src="images/nav4.png" alt="" class="mobile-nav-icon"> FAQ </a>
+                <img src="images/nav4.png" alt="" class="mobile-nav-icon"> Hỏi đáp </a>
             </li>
             <li>
               <a href="career.html">
-                <img src="images/nav5.png" alt="" class="mobile-nav-icon"> Careers </a>
+                <img src="images/nav5.png" alt="" class="mobile-nav-icon"> Tuyển dụng </a>
             </li>
           </ul>
         </div>
         <div class="nav-right">
-          <a href="login.html" class="nav-icon" aria-label="Login">
+          <form class="nav-search-form" role="search" onsubmit="return false;">
+            <input type="text" class="nav-search-input" placeholder="Tìm kiếm...">
+            <button type="submit" class="nav-search-btn" aria-label="Tìm kiếm">🔍</button>
+          </form>
+          <a href="login.html" class="nav-icon" aria-label="Đăng nhập">
             <img src="images/user.png" alt="Login Icon">
           </a>
-          <a href="cart.html" class="nav-icon" aria-label="Shopping Cart">
+          <a href="cart.html" class="nav-icon" aria-label="Giỏ hàng">
             <img src="images/cart.png" alt="Cart Icon">
           </a>
         </div>
@@ -77,131 +86,131 @@
     <main class="faq-page-main">
       <div class="faq-layout-container">
         <div class="faq-content-area">
-          <h1>Frequently Asked Questions</h1>
+          <h1>Các câu hỏi thường gặp</h1>
           <section id="faq-ordering" class="faq-category">
             <h2>
-              <img src="images/cart.png" alt="Cart Icon" class="faq-category-icon"> Ordering & Cart
+              <img src="images/cart.png" alt="Biểu tượng Giỏ hàng" class="faq-category-icon"> Đặt hàng & Giỏ hàng
             </h2>
             <details class="faq-item">
-              <summary class="faq-question">How do I add items to my cart?</summary>
+              <summary class="faq-question">Làm cách nào để thêm mặt hàng vào giỏ hàng?</summary>
               <div class="faq-answer">
-                <p>To add items, please visit our Products page. Click on any product you're interested in to see more details or options. Once you've selected the size (if applicable) and quantity in the pop-up window or product page, click the "Add to Cart" button. Your item will then appear in the cart panel!</p>
+                <p>Để thêm mặt hàng, vui lòng truy cập trang Sản phẩm của chúng tôi. Nhấp vào bất kỳ sản phẩm nào bạn quan tâm để xem thêm chi tiết hoặc tùy chọn. Sau khi bạn đã chọn kích cỡ (nếu có) và số lượng trong cửa sổ pop-up hoặc trang sản phẩm, hãy nhấp vào nút "Thêm vào giỏ". Mặt hàng của bạn sau đó sẽ xuất hiện trong bảng điều khiển giỏ hàng!</p>
               </div>
             </details>
             <details class="faq-item">
-              <summary class="faq-question">How can I change item quantities in my cart?</summary>
+              <summary class="faq-question">Làm cách nào để thay đổi số lượng mặt hàng trong giỏ hàng?</summary>
               <div class="faq-answer">
-                <p>Quantity adjustments can be made on the main Cart page (cart.html). Each item listed in your cart will have '+' and '-' buttons next to its quantity, allowing you to increase or decrease the amount easily. You can also type a number directly into the quantity box.</p>
+                <p>Việc điều chỉnh số lượng có thể được thực hiện trên trang Giỏ hàng chính (cart.html). Mỗi mặt hàng được liệt kê trong giỏ hàng của bạn sẽ có các nút '+' và '-' bên cạnh số lượng, cho phép bạn tăng hoặc giảm số lượng một cách dễ dàng. Bạn cũng có thể nhập trực tiếp một số vào ô số lượng.</p>
               </div>
             </details>
             <details class="faq-item">
-              <summary class="faq-question">How do I remove an item from my cart?</summary>
+              <summary class="faq-question">Làm cách nào để xóa một mặt hàng khỏi giỏ hàng?</summary>
               <div class="faq-answer">
-                <p>On both the Products page side-cart and the main Cart page, each item listed has a small '×' button. Clicking this button will remove the item directly from your cart.</p>
+                <p>Trên cả giỏ hàng bên của trang Sản phẩm và trang Giỏ hàng chính, mỗi mặt hàng được liệt kê đều có một nút '×' nhỏ. Nhấp vào nút này sẽ xóa mặt hàng trực tiếp khỏi giỏ hàng của bạn.</p>
               </div>
             </details>
             <details class="faq-item">
-              <summary class="faq-question">Can I order deals like "Night For 2" more than once?</summary>
+              <summary class="faq-question">Tôi có thể đặt các ưu đãi như "Night For 2" nhiều lần không?</summary>
               <div class="faq-answer">
-                <p>Currently, our system limits deals like "Night For 2" and "Solo Watcher" to one per order to ensure availability. However, you can adjust the quantity for the "Seasoned Popcorn Maker" deal directly in your cart!</p>
+                <p>Hiện tại, hệ thống của chúng tôi giới hạn các ưu đãi như "Night For 2" và "Solo Watcher" ở mức một (1) ưu đãi mỗi đơn hàng để đảm bảo tình trạng sẵn có. Tuy nhiên, bạn có thể điều chỉnh số lượng cho ưu đãi "Seasoned Popcorn Maker" trực tiếp trong giỏ hàng của mình!</p>
               </div>
             </details>
             <details class="faq-item">
-              <summary class="faq-question">I added an item but don't see it in the cart panel.</summary>
+              <summary class="faq-question">Tôi đã thêm một mặt hàng nhưng không thấy nó trong bảng giỏ hàng.</summary>
               <div class="faq-answer">
-                <p>Please ensure you clicked the "Add to Cart" button after selecting your options in the pop-up window or product page. If the issue persists, try refreshing the page. The cart uses your browser's localStorage, which should update instantly.</p>
+                <p>Vui lòng đảm bảo bạn đã nhấp vào nút "Thêm vào giỏ" sau khi chọn các tùy chọn của mình trong cửa sổ pop-up hoặc trang sản phẩm. Nếu sự cố vẫn tiếp diễn, hãy thử làm mới trang. Giỏ hàng sử dụng `localStorage` của trình duyệt, vốn sẽ cập nhật ngay lập tức.</p>
               </div>
             </details>
             <details class="faq-item">
-              <summary class="faq-question">Does the cart save if I close the browser?</summary>
+              <summary class="faq-question">Giỏ hàng có được lưu nếu tôi đóng trình duyệt không?</summary>
               <div class="faq-answer">
-                <p>Yes, items added to your cart are saved in your browser's localStorage, so they should still be there if you close and reopen the browser. However, this is specific to the browser and computer you used.</p>
+                <p>Có, các mặt hàng được thêm vào giỏ hàng của bạn sẽ được lưu trong `localStorage` của trình duyệt, vì vậy chúng vẫn ở đó nếu bạn đóng và mở lại trình duyệt. Tuy nhiên, điều này chỉ áp dụng cụ thể cho trình duyệt và máy tính bạn đã sử dụng.</p>
               </div>
             </details>
           </section>
           <section id="faq-products" class="faq-category">
             <h2>
-              <img src="images/popcorn.png" alt="Popcorn Icon" class="faq-category-icon">Products & Options
+              <img src="images/popcorn.png" alt="Biểu tượng Bắp rang" class="faq-category-icon">Sản phẩm & Tùy chọn
             </h2>
             <details class="faq-item">
-              <summary class="faq-question">What sizes are available for popcorn?</summary>
+              <summary class="faq-question">Bắp rang bơ có những kích cỡ nào?</summary>
               <div class="faq-answer">
-                <p>Our standard popcorn flavors (Buttery Classic, Caramel Bliss, Spicy Chili, Cheesy Cheddar) are available in 64oz, 105oz, and 170oz.</p>
+                <p>Các hương vị bắp rang bơ tiêu chuẩn của chúng tôi (Buttery Classic, Caramel Bliss, Spicy Chili, Cheesy Cheddar) có sẵn ở các kích cỡ 64oz, 105oz và 170oz.</p>
               </div>
             </details>
             <details class="faq-item">
-              <summary class="faq-question">What sizes do the drinks come in?</summary>
+              <summary class="faq-question">Đồ uống có những kích cỡ nào?</summary>
               <div class="faq-answer">
-                <p>All our soft drinks (Cola, Iced Tea, Orange Juice, Water) come in 21oz, 30oz, and 42oz sizes.</p>
+                <p>Tất cả các loại nước giải khát của chúng tôi (Cola, Trà đá, Nước cam, Nước lọc) đều có các kích cỡ 21oz, 30oz và 42oz.</p>
               </div>
             </details>
             <details class="faq-item">
-              <summary class="faq-question">Do the DIY Kits have different sizes?</summary>
+              <summary class="faq-question">Bộ dụng cụ DIY có nhiều kích cỡ khác nhau không?</summary>
               <div class="faq-answer">
-                <p>No, our DIY Kits come in one standard size and do not have size options.</p>
+                <p>Không, Bộ dụng cụ DIY của chúng tôi chỉ có một kích cỡ tiêu chuẩn và không có tùy chọn kích cỡ.</p>
               </div>
             </details>
             <details class="faq-item">
-              <summary class="faq-question">Are the DIY Kits suitable for beginners?</summary>
+              <summary class="faq-question">Bộ dụng cụ DIY có phù hợp cho người mới bắt đầu không?</summary>
               <div class="faq-answer">
-                <p>Yes! The Popcorn Kernel Kit simply provides quality kernels for popping using your preferred method (stovetop, air popper, etc.). The Seasoning Sampler lets you easily experiment with different flavors on your finished popcorn.</p>
+                <p>Có! Bộ Hạt Bắp (Popcorn Kernel Kit) chỉ đơn giản là cung cấp hạt bắp chất lượng để nổ bằng phương pháp ưa thích của bạn (bếp lò, máy làm bắp bằng không khí, v.v.). Bộ Gia Vị Thử (Seasoning Sampler) cho phép bạn dễ dàng thử nghiệm các hương vị khác nhau trên bắp rang đã hoàn thành của mình.</p>
               </div>
             </details>
             <details class="faq-item">
-              <summary class="faq-question">Where can I find more detailed information about specific products?</summary>
+              <summary class="faq-question">Tôi có thể tìm thông tin chi tiết hơn về các sản phẩm cụ thể ở đâu?</summary>
               <div class="faq-answer">
-                <p>For our Popcorn, Kernel Kit, and Seasoning Sampler, you can click the "View Full Details" link found on their respective pop-up details window (accessed from the Products page) to visit their dedicated pages.</p>
+                <p>Đối với Bắp rang bơ, Bộ Hạt Bắp và Bộ Gia Vị Thử, bạn có thể nhấp vào liên kết "Xem chi tiết đầy đủ" (View Full Details) có trên cửa sổ chi tiết pop-up tương ứng (truy cập từ trang Sản phẩm) để truy cập các trang dành riêng cho chúng.</p>
               </div>
             </details>
           </section>
           <section id="faq-account" class="faq-category">
             <h2>
-              <img src="images/user.png" alt="User Icon" class="faq-category-icon">Account (Simulated)
+              <img src="images/user.png" alt="Biểu tượng Người dùng" class="faq-category-icon">Tài khoản (Mô phỏng)
             </h2>
             <details class="faq-item">
-              <summary class="faq-question">How is my account data stored?</summary>
+              <summary class="faq-question">Dữ liệu tài khoản của tôi được lưu trữ như thế nào?</summary>
               <div class="faq-answer">
-                <p>For this website project, user account details (username, password, phone number) are stored directly in your browser's `localStorage`. This is a simulation technique and means the data is only stored on your current computer and browser; it is not sent to or stored on a central server.</p>
+                <p>Đối với dự án trang web này, chi tiết tài khoản người dùng (tên người dùng, mật khẩu, số điện thoại) được lưu trữ trực tiếp trong `localStorage` của trình duyệt. Đây là một kỹ thuật mô phỏng và có nghĩa là dữ liệu chỉ được lưu trữ trên máy tính và trình duyệt hiện tại của bạn; nó không được gửi đến hoặc lưu trữ trên máy chủ trung tâm.</p>
               </div>
             </details>
             <details class="faq-item">
-              <summary class="faq-question">What happens if I "Forget Password"?</summary>
+              <summary class="faq-question">Điều gì xảy ra nếu tôi "Quên mật khẩu"?</summary>
               <div class="faq-answer">
-                <p>Since this is a simulation, the "Forgot Password" link provides an option to clear all simulated account data currently stored in your browser's `localStorage`. This allows you to 'reset' the accounts for testing purposes.</p>
+                <p>Vì đây là mô phỏng, liên kết "Quên mật khẩu" cung cấp tùy chọn xóa tất cả dữ liệu tài khoản mô phỏng hiện được lưu trữ trong `localStorage` của trình duyệt. Điều này cho phép bạn 'đặt lại' các tài khoản cho mục đích thử nghiệm.</p>
               </div>
             </details>
             <details class="faq-item">
-              <summary class="faq-question">What happens when I log out?</summary>
+              <summary class="faq-question">Điều gì xảy ra khi tôi đăng xuất?</summary>
               <div class="faq-answer">
-                <p>Logging out clears your logged-in status for the current browser session (sessionStorage). Your account information remains saved in localStorage so you can log back in later on the same browser.</p>
+                <p>Đăng xuất sẽ xóa trạng thái đăng nhập của bạn cho phiên trình duyệt hiện tại (sessionStorage). Thông tin tài khoản của bạn vẫn được lưu trong localStorage để bạn có thể đăng nhập lại sau trên cùng một trình duyệt.</p>
               </div>
             </details>
             <details class="faq-item">
-              <summary class="faq-question">Could you have linked the cart details to each account instead of not linking them at all?</summary>
+              <summary class="faq-question">Bạn có thể liên kết chi tiết giỏ hàng với từng tài khoản thay vì không liên kết chúng không?</summary>
               <div class="faq-answer">
-                <p>True, but I'm doing all of this by myself. The separate systems are good enough. I think.</p>
+                <p>Đúng vậy, nhưng tôi đang tự mình làm tất cả những điều này. Các hệ thống riêng biệt là đủ tốt. Tôi nghĩ vậy.</p>
               </div>
             </details>
           </section>
         </div>
         <aside class="faq-contents-bar">
-          <h3>Contents</h3>
+          <h3>Mục lục</h3>
           <ul>
             <li>
-              <a href="#faq-ordering">Ordering & Cart</a>
+              <a href="#faq-ordering">Đặt hàng & Giỏ hàng</a>
             </li>
             <li>
-              <a href="#faq-products">Products & Options</a>
+              <a href="#faq-products">Sản phẩm & Tùy chọn</a>
             </li>
             <li>
-              <a href="#faq-account">Account (Simulated)</a>
+              <a href="#faq-account">Tài khoản (Mô phỏng)</a>
             </li>
           </ul>
         </aside>
       </div>
     </main>
     <footer class="main-footer">
-      <p class="quote">"I'm not built for this much thinking" - Me, 5 minutes after I declared that I want to do this assignment on my own</p>
+      <p class="quote">"Tôi không sinh ra để suy nghĩ nhiều như vậy" - Tôi, 5 phút sau khi tuyên bố muốn tự mình làm bài tập này</p>
     </footer>
     <script src="./scripts/main.js"></script>
     <script type="text/javascript">

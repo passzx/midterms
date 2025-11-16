@@ -1,20 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Newsroom</title>
+    <title>Phòng tin tức</title>
     <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="./icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./icon/favicon-16x16.png">
+    <link rel="manifest" href="./icon/site.webmanifest">
+    <link rel="shortcut icon" href="./icon/favicon.ico">
     <link rel="stylesheet" href="./styles/news.css">
-    <meta name="description" content="Your one-stop shop for the most delicious popcorn! Explore our classic flavors, drinks, and DIY kits. Freshly popped joy, delivered.">
-    <meta name="keywords" content="popcorn, ecommerce, snacks, movie night, caramel popcorn, buttery popcorn, DIY popcorn">
+    <meta name="description" content="Cửa hàng tổng hợp của bạn cho món bắp rang bơ ngon nhất! Khám phá các hương vị cổ điển, đồ uống và bộ dụng cụ DIY của chúng tôi. Niềm vui bùng nổ, được giao tận nơi.">
+    <meta name="keywords" content="bắp rang bơ, ecommerce, đồ ăn vặt, xem phim, bắp rang caramen, bắp rang bơ, bắp rang tự làm">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Popcorn...? - The Best Popcorn in Town">
-    <meta property="og:description" content="Your one-stop shop for the most delicious popcorn! Explore our classic flavors, drinks, and DIY kits.">
+    <meta property="og:title" content="Popcorn...? - Bắp rang bơ ngon nhất">
+    <meta property="og:description" content="Cửa hàng tổng hợp của bạn cho món bắp rang bơ ngon nhất! Khám phá các hương vị cổ điển, đồ uống và bộ dụng cụ DIY.">
     <meta property="og:image" content="images/pA.jpg">
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="Popcorn...? - The Best Popcorn in Town">
-    <meta property="twitter:description" content="Your one-stop shop for the most delicious popcorn! Explore our classic flavors, drinks, and DIY kits.">
+    <meta property="twitter:title" content="Popcorn...? - Bắp rang bơ ngon nhất">
+    <meta property="twitter:description" content="Cửa hàng tổng hợp của bạn cho món bắp rang bơ ngon nhất! Khám phá các hương vị cổ điển, đồ uống và bộ dụng cụ DIY.">
     <meta property="twitter:image" content="images/pA.jpg">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ED71CZC4S3"></script>
     <script>
@@ -31,11 +36,11 @@
     <header class="main-header">
       <nav class="main-nav">
         <div class="nav-left">
-          <a href="index.html" class="nav-logo" aria-label="Homepage">
+          <a href="index.html" class="nav-logo" aria-label="Trang chủ">
             <img src="images/logo.svg" alt="Site Logo">
           </a>
         </div>
-        <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <button class="mobile-nav-toggle" aria-label="Mở/đóng menu điều hướng" aria-expanded="false">
           <span class="hamburger-icon"></span>
           <span class="hamburger-icon"></span>
           <span class="hamburger-icon"></span>
@@ -44,31 +49,35 @@
           <ul>
             <li>
               <a href="about.html">
-                <img src="images/nav1.png" alt="" class="mobile-nav-icon"> About Us </a>
+                <img src="images/nav1.png" alt="" class="mobile-nav-icon"> Về chúng tôi </a>
             </li>
             <li>
               <a href="catalogue.html">
-                <img src="images/nav2.png" alt="" class="mobile-nav-icon"> Products </a>
+                <img src="images/nav2.png" alt="" class="mobile-nav-icon"> Sản phẩm </a>
             </li>
             <li>
               <a href="news.html">
-                <img src="images/nav3.png" alt="" class="mobile-nav-icon"> News </a>
+                <img src="images/nav3.png" alt="" class="mobile-nav-icon"> Tin tức </a>
             </li>
             <li>
               <a href="faq.html">
-                <img src="images/nav4.png" alt="" class="mobile-nav-icon"> FAQ </a>
+                <img src="images/nav4.png" alt="" class="mobile-nav-icon"> Hỏi đáp </a>
             </li>
             <li>
               <a href="career.html">
-                <img src="images/nav5.png" alt="" class="mobile-nav-icon"> Careers </a>
+                <img src="images/nav5.png" alt="" class="mobile-nav-icon"> Tuyển dụng </a>
             </li>
           </ul>
         </div>
         <div class="nav-right">
-          <a href="login.html" class="nav-icon" aria-label="Login">
+          <form class="nav-search-form" role="search" onsubmit="return false;">
+            <input type="text" class="nav-search-input" placeholder="Tìm kiếm...">
+            <button type="submit" class="nav-search-btn" aria-label="Tìm kiếm">🔍</button>
+          </form>
+          <a href="login.html" class="nav-icon" aria-label="Đăng nhập">
             <img src="images/user.png" alt="Login Icon">
           </a>
-          <a href="cart.html" class="nav-icon" aria-label="Shopping Cart">
+          <a href="cart.html" class="nav-icon" aria-label="Giỏ hàng">
             <img src="images/cart.png" alt="Cart Icon">
           </a>
         </div>
@@ -76,77 +85,77 @@
     </header>
     <main class="news-page-main">
       <div class="news-container">
-        <h1>Latest News</h1>
+        <h1>Tin tức mới nhất</h1>
         <div class="news-grid">
           <article class="news-item span-3">
             <a href="#" class="news-item-link">
               <div class="news-item-image-wrapper">
-                <img src="images/news_large_1.jpg" alt="News Item 1 Image">
+                <img src="images/news_large_1.jpg" alt="Ảnh tin 1">
               </div>
               <div class="news-item-content">
-                <span class="news-item-category">UPDATE</span>
-                <h2 class="news-item-title">Major Popcorn Sale Announced for Next Weekend!</h2>
-                <p class="news-item-date">April 22, 2025</p>
+                <span class="news-item-category">CẬP NHẬT</span>
+                <h2 class="news-item-title">Đợt Giảm Giá Bắp Rang Bơ Lớn Được Công Bố Vào Cuối Tuần Tới!</h2>
+                <p class="news-item-date">22 tháng 4, 2025</p>
               </div>
             </a>
           </article>
           <article class="news-item span-2">
             <a href="#" class="news-item-link">
               <div class="news-item-image-wrapper">
-                <img src="images/news_medium_1.jpg" alt="News Item 2 Image">
+                <img src="images/news_medium_1.jpg" alt="Ảnh tin 2">
               </div>
               <div class="news-item-content">
-                <span class="news-item-category">DIY TIPS</span>
-                <h2 class="news-item-title">Perfect Homemade Caramel Bliss: Our Secret Recipe</h2>
-                <p class="news-item-date">April 21, 2025</p>
+                <span class="news-item-category">MẸO TỰ LÀM (DIY)</span>
+                <h2 class="news-item-title">Caramel Bliss Tự Làm Hoàn Hảo: Công Thức Bí Mật Của Chúng Tôi</h2>
+                <p class="news-item-date">21 tháng 4, 2025</p>
               </div>
             </a>
           </article>
           <article class="news-item span-2">
             <a href="#" class="news-item-link">
               <div class="news-item-image-wrapper">
-                <img src="images/news_medium_2.jpg" alt="News Item 3 Image">
+                <img src="images/news_medium_2.jpg" alt="Ảnh tin 3">
               </div>
               <div class="news-item-content">
-                <span class="news-item-category">NEW ARRIVAL</span>
-                <h2 class="news-item-title">Seasoning Sampler Now In Stock</h2>
-                <p class="news-item-date">April 20, 2025</p>
+                <span class="news-item-category">HÀNG MỚI VỀ</span>
+                <h2 class="news-item-title">Bộ Gia Vị Thử (Seasoning Sampler) Hiện Đã Có Hàng</h2>
+                <p class="news-item-date">20 tháng 4, 2025</p>
               </div>
             </a>
           </article>
           <article class="news-item span-1">
             <a href="#" class="news-item-link">
               <div class="news-item-image-wrapper">
-                <img src="images/news_small_1.jpg" alt="News Item 4 Image">
+                <img src="images/news_small_1.jpg" alt="Ảnh tin 4">
               </div>
               <div class="news-item-content">
-                <span class="news-item-category">STORE NEWS</span>
-                <h2 class="news-item-title">New Drink Flavors Coming Soon</h2>
-                <p class="news-item-date">April 19, 2025</p>
+                <span class="news-item-category">TIN CỬA HÀNG</span>
+                <h2 class="news-item-title">Các Hương Vị Đồ Uống Mới Sắp Ra Mắt</h2>
+                <p class="news-item-date">19 tháng 4, 2025</p>
               </div>
             </a>
           </article>
           <article class="news-item span-1">
             <a href="#" class="news-item-link">
               <div class="news-item-image-wrapper">
-                <img src="images/news_small_2.jpg" alt="News Item 5 Image">
+                <img src="images/news_small_2.jpg" alt="Ảnh tin 5">
               </div>
               <div class="news-item-content">
-                <span class="news-item-category">COMMUNITY</span>
-                <h2 class="news-item-title">Partnering with Local Charity Event</h2>
-                <p class="news-item-date">April 18, 2025</p>
+                <span class="news-item-category">CỘNG ĐỒNG</span>
+                <h2 class="news-item-title">Hợp Tác Với Sự Kiện Từ Thiện Địa Phương</h2>
+                <p class="news-item-date">18 tháng 4, 2025</p>
               </div>
             </a>
           </article>
           <article class="news-item span-1">
             <a href="#" class="news-item-link">
               <div class="news-item-image-wrapper">
-                <img src="images/news_small_3.jpg" alt="News Item 6 Image">
+                <img src="images/news_small_3.jpg" alt="Ảnh tin 6">
               </div>
               <div class="news-item-content">
-                <span class="news-item-category">HOW-TO</span>
-                <h2 class="news-item-title">Choosing the Right Kernel Size</h2>
-                <p class="news-item-date">April 17, 2025</p>
+                <span class="news-item-category">HƯỚNG DẪN</span>
+                <h2 class="news-item-title">Chọn Kích Cỡ Hạt Bắp Phù Hợp</h2>
+                <p class="news-item-date">17 tháng 4, 2025</p>
               </div>
             </a>
           </article>
@@ -154,7 +163,7 @@
       </div>
     </main>
     <footer class="main-footer">
-      <p class="quote">"I'm not built for this much thinking" - Me, 5 minutes after I declared that I want to do this assignment on my own</p>
+      <p class="quote">"Tôi không sinh ra để suy nghĩ nhiều như vậy" - Tôi, 5 phút sau khi tuyên bố muốn tự mình làm bài tập này</p>
     </footer>
     <script src="./scripts/main.js"></script>
     <script src="./scripts/news.js"></script>

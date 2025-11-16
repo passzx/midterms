@@ -1,21 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seasoning Sampler - Product Details</title>
+    <title>Bộ Gia Vị Thử - Chi tiết Sản phẩm</title>
     <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="./icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./icon/favicon-16x16.png">
+    <link rel="manifest" href="./icon/site.webmanifest">
+    <link rel="shortcut icon" href="./icon/favicon.ico">
     <link rel="stylesheet" href="./styles/catalogue.css">
     <link rel="stylesheet" href="./styles/product_detail.css">
-    <meta name="description" content="Your one-stop shop for the most delicious popcorn! Explore our classic flavors, drinks, and DIY kits. Freshly popped joy, delivered.">
-    <meta name="keywords" content="popcorn, ecommerce, snacks, movie night, caramel popcorn, buttery popcorn, DIY popcorn">
+    <meta name="description" content="Cửa hàng tổng hợp của bạn cho món bắp rang bơ ngon nhất! Khám phá các hương vị cổ điển, đồ uống và bộ dụng cụ DIY của chúng tôi. Niềm vui bùng nổ, được giao tận nơi.">
+    <meta name="keywords" content="bắp rang bơ, ecommerce, đồ ăn vặt, xem phim, bắp rang caramen, bắp rang bơ, bắp rang tự làm">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Popcorn...? - The Best Popcorn in Town">
-    <meta property="og:description" content="Your one-stop shop for the most delicious popcorn! Explore our classic flavors, drinks, and DIY kits.">
+    <meta property="og:title" content="Popcorn...? - Bắp rang bơ ngon nhất">
+    <meta property="og:description" content="Cửa hàng tổng hợp của bạn cho món bắp rang bơ ngon nhất! Khám phá các hương vị cổ điển, đồ uống và bộ dụng cụ DIY.">
     <meta property="og:image" content="images/pA.jpg">
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="Popcorn...? - The Best Popcorn in Town">
-    <meta property="twitter:description" content="Your one-stop shop for the most delicious popcorn! Explore our classic flavors, drinks, and DIY kits.">
+    <meta property="twitter:title" content="Popcorn...? - Bắp rang bơ ngon nhất">
+    <meta property="twitter:description" content="Cửa hàng tổng hợp của bạn cho món bắp rang bơ ngon nhất! Khám phá các hương vị cổ điển, đồ uống và bộ dụng cụ DIY.">
     <meta property="twitter:image" content="images/pA.jpg">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ED71CZC4S3"></script>
     <script>
@@ -32,11 +37,11 @@
     <header class="main-header">
       <nav class="main-nav">
         <div class="nav-left">
-          <a href="index.html" class="nav-logo" aria-label="Homepage">
+          <a href="index.html" class="nav-logo" aria-label="Trang chủ">
             <img src="images/logo.svg" alt="Site Logo">
           </a>
         </div>
-        <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <button class="mobile-nav-toggle" aria-label="Mở/đóng menu điều hướng" aria-expanded="false">
           <span class="hamburger-icon"></span>
           <span class="hamburger-icon"></span>
           <span class="hamburger-icon"></span>
@@ -45,31 +50,35 @@
           <ul>
             <li>
               <a href="about.html">
-                <img src="images/nav1.png" alt="" class="mobile-nav-icon"> About Us </a>
+                <img src="images/nav1.png" alt="" class="mobile-nav-icon"> Về chúng tôi </a>
             </li>
             <li>
               <a href="catalogue.html">
-                <img src="images/nav2.png" alt="" class="mobile-nav-icon"> Products </a>
+                <img src="images/nav2.png" alt="" class="mobile-nav-icon"> Sản phẩm </a>
             </li>
             <li>
               <a href="news.html">
-                <img src="images/nav3.png" alt="" class="mobile-nav-icon"> News </a>
+                <img src="images/nav3.png" alt="" class="mobile-nav-icon"> Tin tức </a>
             </li>
             <li>
               <a href="faq.html">
-                <img src="images/nav4.png" alt="" class="mobile-nav-icon"> FAQ </a>
+                <img src="images/nav4.png" alt="" class="mobile-nav-icon"> Hỏi đáp </a>
             </li>
             <li>
               <a href="career.html">
-                <img src="images/nav5.png" alt="" class="mobile-nav-icon"> Careers </a>
+                <img src="images/nav5.png" alt="" class="mobile-nav-icon"> Tuyển dụng </a>
             </li>
           </ul>
         </div>
         <div class="nav-right">
-          <a href="login.html" class="nav-icon" aria-label="Login">
+          <form class="nav-search-form" role="search" onsubmit="return false;">
+            <input type="text" class="nav-search-input" placeholder="Tìm kiếm...">
+            <button type="submit" class="nav-search-btn" aria-label="Tìm kiếm">🔍</button>
+          </form>
+          <a href="login.html" class="nav-icon" aria-label="Đăng nhập">
             <img src="images/user.png" alt="Login Icon">
           </a>
-          <a href="cart.html" class="nav-icon" aria-label="Shopping Cart">
+          <a href="cart.html" class="nav-icon" aria-label="Giỏ hàng">
             <img src="images/cart.png" alt="Cart Icon">
           </a>
         </div>
@@ -79,42 +88,91 @@
       <div class="product-detail-container">
         <section class="product-image-gallery">
           <div class="gallery-main-view">
-            <img id="gallery-main-image" src="images/product_diy2.jpg" alt="Seasoning Sampler">
+            <img id="gallery-main-image" src="images/product_diy2.jpg" alt="Bộ Gia Vị Thử">
           </div>
           <div class="gallery-controls">
-            <button id="gallery-prev" class="gallery-nav-btn" aria-label="Previous Image">&lt;</button>
+            <button id="gallery-prev" class="gallery-nav-btn" aria-label="Ảnh trước">&lt;</button>
             <div class="gallery-thumbnails" id="gallery-thumbnails">
-              <img src="images/product_diy2.jpg" alt="Thumbnail 1" class="thumbnail active" data-index="0">
-              <img src="images/pC1.jpg" alt="Thumbnail 2" class="thumbnail" data-index="1">
-              <img src="images/pC2.jpg" alt="Thumbnail 3" class="thumbnail" data-index="2">
-              <img src="images/pC3.jpg" alt="Thumbnail 4" class="thumbnail" data-index="3">
-              <img src="images/pC4.jpg" alt="Thumbnail 5" class="thumbnail" data-index="4">
+              <img src="images/product_diy2.jpg" alt="Ảnh nhỏ 1" class="thumbnail active" data-index="0">
+              <img src="images/pC1.jpg" alt="Ảnh nhỏ 2" class="thumbnail" data-index="1">
+              <img src="images/pC2.jpg" alt="Ảnh nhỏ 3" class="thumbnail" data-index="2">
+              <img src="images/pC3.jpg" alt="Ảnh nhỏ 4" class="thumbnail" data-index="3">
+              <img src="images/pC4.jpg" alt="Ảnh nhỏ 5" class="thumbnail" data-index="4">
             </div>
-            <button id="gallery-next" class="gallery-nav-btn" aria-label="Next Image">&gt;</button>
+            <button id="gallery-next" class="gallery-nav-btn" aria-label="Ảnh tiếp theo">&gt;</button>
           </div>
         </section>
         <section class="product-info-details">
-          <h1 id="product-name">Seasoning Sampler</h1>
-          <p id="product-description" class="large-description"> Unleash a world of flavor possibilities onto your homemade popcorn! Our Seasoning Sampler kit is your passport to discovering your ultimate popcorn topping. Tired of plain butter and salt? This curated variety pack lets you experiment with a range of delicious, perfectly blended seasonings designed to complement freshly popped kernels. <br>
-            <br>Our 4 flavors featured on our website, too, was made from this very material! By buying thís pack, you may even discover your own favorite flavor, as this sampler has something for every palate. It's the perfect companion to our Popcorn Kernel Kit, allowing you to customize batch after batch. Find your favorite, mix and match, and elevate your DIY popcorn game from simple snack to gourmet treat!
+          <h1 id="product-name">Bộ Gia Vị Thử (Seasoning Sampler)</h1>
+          
+          <p class="product-sku">Mã sản phẩm: DIY-S002</p>
+
+          <p id="product-description" class="large-description"> Giải phóng một thế giới hương vị lên món bắp rang bơ tự làm của bạn! Bộ Gia Vị Thử của chúng tôi là tấm vé để khám phá loại topping bắp rang tuyệt đỉnh của bạn. Bạn đã chán bơ và muối thông thường? Gói đa dạng này cho phép bạn thử nghiệm với hàng loạt gia vị thơm ngon, được pha trộn hoàn hảo, thiết kế để bổ sung cho hạt bắp mới nổ. <br>
+            <br>4 hương vị nổi bật trên trang web của chúng tôi cũng được làm từ chính nguyên liệu này! Bằng cách mua gói này, bạn thậm chí có thể khám phá ra hương vị yêu thích của riêng mình, vì bộ sản phẩm này có thứ gì đó cho mọi khẩu vị. Đây là người bạn đồng hành hoàn hảo cho Bộ Hạt Bắp của chúng tôi, cho phép bạn tùy chỉnh hết mẻ này đến mẻ khác. Tìm món yêu thích, trộn và kết hợp, và nâng tầm trò chơi bắp rang bơ DIY của bạn từ món ăn nhẹ đơn giản lên món ăn sành điệu!
           </p>
           <form id="product-options-form">
             <div class="quantity-picker">
-              <label for="product-quantity">Quantity:</label>
+              <label for="product-quantity">Số lượng:</label>
               <button type="button" class="quantity-btn minus" id="product-qty-minus">-</button>
               <input type="number" id="product-quantity" name="quantity" value="1" min="1" step="1">
               <button type="button" class="quantity-btn plus" id="product-qty-plus">+</button>
             </div>
-            <div class="product-price-display"> Price: <span id="product-current-price">$0.00</span>
+            <div class="product-price-display"> Giá: <span id="product-current-price">$0.00</span>
             </div>
-            <button type="submit" class="button add-to-cart-btn">Add to Cart</button>
+            <button type="submit" class="button add-to-cart-btn">Thêm vào giỏ</button>
             <p id="add-to-cart-message" class="form-message"></p>
+            <div class="product-share">
+              <span>Chia sẻ:</span>
+              <div class="share-icons">
+                <a href="#" class="share-icon" aria-label="Chia sẻ lên Facebook"><img src="images/facebook.png" alt="Facebook"></a>
+                <a href="#" class="share-icon" aria-label="Chia sẻ lên Twitter"><img src="images/twitter.png" alt="Twitter"></a>
+                <a href="#" class="share-icon" aria-label="Chia sẻ qua Email"><img src="images/email.png" alt="Email"></a>
+              </div>
+            </div>
           </form>
         </section>
       </div>
+      <section class="product-reviews-section">
+        <div class="product-reviews-container">
+          <h2>Đánh giá & Nhận xét</h2>
+          
+          <div class="reviews-list">
+            <div class="review-item">
+              <strong class="review-author">Ngọc Lan</strong>
+              <p class="review-body">"Mua về rắc thử vui lắm. Vị phô mai với vị bơ là ngon nhất. Mấy vị kia hơi lạ nhưng cũng hay."</p>
+              <span class="review-date">Ngày 21/10/2025</span>
+            </div>
+            <div class="review-item">
+              <strong class="review-author">Gia đình bé Na</strong>
+              <p class="review-body">"Con gái tôi rất thích tự mình rắc gia vị. Một hoạt động cuối tuần vui vẻ cho cả nhà. Sẽ mua lại."</p>
+              <span class="review-date">Ngày 17/10/2025</span>
+            </div>
+          </div>
+
+          <form id="review-form" class="review-form">
+            <h3>Gửi đánh giá của bạn</h3>
+            <div class="review-form-split">
+              <div class="form-group">
+                <label for="review-name">Tên của bạn</label>
+                <input type="text" id="review-name" name="name" required>
+              </div>
+              <div class="form-group">
+                <label for="review-email">Email</label>
+                <input type="email" id="review-email" name="email">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="review-comment">Nhận xét của bạn</label>
+              <textarea id="review-comment" name="comment" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="button">Gửi nhận xét</button>
+            <p id="review-form-message" class="form-message"></p>
+          </form>
+        </div>
+      </section>
     </main>
     <footer class="main-footer">
-      <p class="quote">"I'm not built for this much thinking" - Me, 5 minutes after I declared that I want to do this assignment on my own</p>
+      <p class="quote">"Tôi không sinh ra để suy nghĩ nhiều như vậy" - Tôi, 5 phút sau khi tuyên bố muốn tự mình làm bài tập này</p>
     </footer>
     <script src="./scripts/main.js"></script>
     <script src="./scripts/product_C.js"></script>

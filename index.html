@@ -1,20 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage | Popcorn...?</title>
+    <title>Trang chủ | Popcorn...?</title>
     <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="./icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./icon/favicon-16x16.png">
+    <link rel="manifest" href="./icon/site.webmanifest">
+    <link rel="shortcut icon" href="./icon/favicon.ico">
     <link rel="stylesheet" href="./styles/index.css">
-    <meta name="description" content="Your one-stop shop for the most delicious popcorn! Explore our classic flavors, drinks, and DIY kits. Freshly popped joy, delivered.">
-    <meta name="keywords" content="popcorn, ecommerce, snacks, movie night, caramel popcorn, buttery popcorn, DIY popcorn">
+    <meta name="description" content="Cửa hàng tổng hợp của bạn cho món bắp rang bơ ngon nhất! Khám phá các hương vị cổ điển, đồ uống và bộ dụng cụ DIY của chúng tôi. Niềm vui bùng nổ, được giao tận nơi.">
+    <meta name="keywords" content="bắp rang bơ, ecommerce, đồ ăn vặt, xem phim, bắp rang caramen, bắp rang bơ, bắp rang tự làm">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Popcorn...? - The Best Popcorn in Town">
-    <meta property="og:description" content="Your one-stop shop for the most delicious popcorn! Explore our classic flavors, drinks, and DIY kits.">
+    <meta property="og:title" content="Popcorn...? - Bắp rang bơ ngon nhất">
+    <meta property="og:description" content="Cửa hàng tổng hợp của bạn cho món bắp rang bơ ngon nhất! Khám phá các hương vị cổ điển, đồ uống và bộ dụng cụ DIY.">
     <meta property="og:image" content="images/pA.jpg">
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="Popcorn...? - The Best Popcorn in Town">
-    <meta property="twitter:description" content="Your one-stop shop for the most delicious popcorn! Explore our classic flavors, drinks, and DIY kits.">
+    <meta property="twitter:title" content="Popcorn...? - Bắp rang bơ ngon nhất">
+    <meta property="twitter:description" content="Cửa hàng tổng hợp của bạn cho món bắp rang bơ ngon nhất! Khám phá các hương vị cổ điển, đồ uống và bộ dụng cụ DIY.">
     <meta property="twitter:image" content="images/pA.jpg">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ED71CZC4S3"></script>
     <script>
@@ -31,11 +36,11 @@
     <header class="main-header">
       <nav class="main-nav">
         <div class="nav-left">
-          <a href="index.html" class="nav-logo" aria-label="Homepage">
+          <a href="index.html" class="nav-logo" aria-label="Trang chủ">
             <img src="images/logo.svg" alt="Site Logo">
           </a>
         </div>
-        <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <button class="mobile-nav-toggle" aria-label="Mở/đóng menu điều hướng" aria-expanded="false">
           <span class="hamburger-icon"></span>
           <span class="hamburger-icon"></span>
           <span class="hamburger-icon"></span>
@@ -44,56 +49,104 @@
           <ul>
             <li>
               <a href="about.html">
-                <img src="images/nav1.png" alt="" class="mobile-nav-icon"> About Us </a>
+                <img src="images/nav1.png" alt="" class="mobile-nav-icon"> Về chúng tôi </a>
             </li>
             <li>
               <a href="catalogue.html">
-                <img src="images/nav2.png" alt="" class="mobile-nav-icon"> Products </a>
+                <img src="images/nav2.png" alt="" class="mobile-nav-icon"> Sản phẩm </a>
             </li>
             <li>
               <a href="news.html">
-                <img src="images/nav3.png" alt="" class="mobile-nav-icon"> News </a>
+                <img src="images/nav3.png" alt="" class="mobile-nav-icon"> Tin tức </a>
             </li>
             <li>
               <a href="faq.html">
-                <img src="images/nav4.png" alt="" class="mobile-nav-icon"> FAQ </a>
+                <img src="images/nav4.png" alt="" class="mobile-nav-icon"> Hỏi đáp </a>
             </li>
             <li>
               <a href="career.html">
-                <img src="images/nav5.png" alt="" class="mobile-nav-icon"> Careers </a>
+                <img src="images/nav5.png" alt="" class="mobile-nav-icon"> Tuyển dụng </a>
             </li>
           </ul>
         </div>
         <div class="nav-right">
-          <a href="login.html" class="nav-icon" aria-label="Login">
+          <form class="nav-search-form" role="search" onsubmit="return false;">
+            <input type="text" class="nav-search-input" placeholder="Tìm kiếm...">
+            <button type="submit" class="nav-search-btn" aria-label="Tìm kiếm">🔍</button>
+          </form>
+          <a href="login.html" class="nav-icon" aria-label="Đăng nhập">
             <img src="images/user.png" alt="Login Icon">
           </a>
-          <a href="cart.html" class="nav-icon" aria-label="Shopping Cart">
+          <a href="cart.html" class="nav-icon" aria-label="Giỏ hàng">
             <img src="images/cart.png" alt="Cart Icon">
           </a>
         </div>
       </nav>
     </header>
-    <div class="container">
-      <section class="hero-section">
-        <div class="hero-logo">
-          <img src="images/logo.svg" alt="Site Logo Large">
-        </div>
-        <div class="hero-content">
-          <h1>Popcorn...?</h1>
-          <div class="hero-buttons">
-            <a href="catalogue.html" class="button hero-button">All Products</a>
-            <a href="news.html" class="button hero-button">News and Promotion</a>
+    
+    <main>
+      <section class="slider-section" aria-label="Quảng cáo nổi bật">
+        <div class="slider-wrapper" id="slider-wrapper">
+          <div class="slide">
+            <img src="images/login_bg2.jpg" alt="Các bát bắp rang bơ">
+            <div class="slide-caption">
+              <h2>Chào mừng đến Popcorn...?</h2>
+              <p>Cửa hàng cho mọi nhu cầu bắp rang bơ của bạn!</p>
+              <a href="catalogue.html" class="button">Xem sản phẩm</a>
+            </div>
           </div>
+          <div class="slide">
+            <img src="images/news_large_1.jpg" alt="Đồ họa Giảm giá lớn">
+            <div class="slide-caption">
+              <h2>Giảm giá cực lớn!</h2>
+              <p>Hãy sẵn sàng cho đợt giảm giá lớn vào cuối tuần này.</p>
+              <a href="news.html" class="button">Xem tin tức</a>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="images/pA.jpg" alt="Các vị bắp rang bơ">
+            <div class="slide-caption">
+              <h2>Khám phá các hương vị</h2>
+              <p>Từ bơ cổ điển đến phô mai béo ngậy.</p>
+              <a href="catalogue.html#category-popcorn" class="button">Xem hương vị</a>
+            </div>
+          </div>
+        </div>
+        <button class="slider-nav prev" id="slider-prev" aria-label="Slide trước">❮</button>
+        <button class="slider-nav next" id="slider-next" aria-label="Slide tiếp">❯</button>
+        <div class="slider-dots" id="slider-dots">
+          </div>
+      </section>
+
+      <div class="container">
+        <section class="hero-section">
+          <div class="hero-logo">
+            <img src="images/logo.svg" alt="Site Logo Large">
+          </div>
+          <div class="hero-content">
+            <h1>Popcorn...?</h1>
+            <div class="hero-buttons">
+              <a href="catalogue.html" class="button hero-button">Tất cả sản phẩm</a>
+              <a href="news.html" class="button hero-button">Tin tức và Khuyến mãi</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="map-section">
+          <h2>Ghé thăm chúng tôi</h2>
           <div class="map-container">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.816546818561!2d105.84399008128861!3d20.9999896748113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac71752d8f79%3A0xd2ec575c01017afa!2sNational%20Economics%20University!5e0!3m2!1sen!2s!4v1745084146100!5m2!1sen!2s" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
-    </div>
+      </section>
+    </main>
+
     <footer class="main-footer">
-      <p class="quote">"I'm not built for this much thinking" - Me, 5 minutes after I declared that I want to do this assignment on my own</p>
+      <p class="quote">"Tôi không sinh ra để suy nghĩ nhiều như vậy" - Tôi, 5 phút sau khi tuyên bố muốn tự mình làm bài tập này</p>
     </footer>
+    
     <script src="./scripts/main.js"></script>
+    <script src="./scripts/index-slider.js"></script>
     <script type="text/javascript">
       var Tawk_API = Tawk_API || {},
         Tawk_LoadStart = new Date();
