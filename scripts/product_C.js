@@ -149,7 +149,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const commentInput = document.getElementById('review-comment');
 
         if (nameInput.value.trim() && commentInput.value.trim()) {
-            // Chỉ mô phỏng việc gửi thành công
             if (reviewFormMessage) {
                 reviewFormMessage.textContent = 'Cảm ơn bạn đã gửi nhận xét!';
                 reviewFormMessage.className = 'form-message success';

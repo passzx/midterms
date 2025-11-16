@@ -103,34 +103,32 @@
   }
 }
 
-/* --- Slider Section --- */
 .slider-section {
   width: 100%;
-  height: 450px; /* Điều chỉnh chiều cao mong muốn */
+  height: 450px;
   position: relative;
   overflow: hidden;
   background-color: #eee;
 }
 
 .slider-wrapper {
-  /* Chiều rộng sẽ được JS đặt (ví dụ: 300% cho 3 slide) */
   height: 100%;
   display: flex;
   transition: transform 0.5s ease-in-out;
 }
 
 .slide {
-  width: 100%; /* Mỗi slide chiếm 100% chiều rộng của wrapper */
+  width: 100%;
   height: 100%;
   position: relative;
-  flex-shrink: 0; /* Đảm bảo slide không bị co lại */
+  flex-shrink: 0;
 }
 
 .slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(0.7); /* Làm ảnh tối đi một chút để nổi bật chữ */
+  filter: brightness(0.7);
 }
 
 .slide-caption {
@@ -175,7 +173,7 @@
 
 .slider-nav:hover {
   background-color: rgba(0, 0, 0, 0.8);
-  transform: translateY(-50%); /* Ghi đè hover của button chung */
+  transform: translateY(-50%);
 }
 
 .slider-nav.prev {
@@ -209,7 +207,6 @@
   background-color: white;
 }
 
-/* --- Map Section (Tách ra từ hero) --- */
 .map-section {
   padding: 20px 0 40px 0;
   text-align: center;
@@ -221,18 +218,14 @@
   color: var(--text-color);
 }
 
-/* Ghi đè/Chỉnh sửa CSS cũ trong styles/index.css */
-/* Xóa bỏ bản đồ khỏi hero-content cũ */
 .hero-content .map-container {
   display: none;
 }
 
-/* Đảm bảo hero-section vẫn hoạt động tốt mà không có bản đồ */
 .hero-section {
-  padding-bottom: 20px; /* Giảm padding dưới nếu cần */
+  padding-bottom: 20px;
 }
 
-/* Điều chỉnh cho màn hình nhỏ */
 @media (max-width: 600px) {
   .slider-section {
     height: 300px;

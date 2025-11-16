@@ -1,20 +1,14 @@
-// product_detail.js - Logic for the Popcorn/DIY product detail page
-
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- Simplified Product Data (Popcorn & DIY Only) ---
     const productData = [
-       // Popcorn
        { id: 'pop001', category: 'popcorn', name: 'Buttery Classic', description: 'Warm, buttery, and irresistible.', basePrice: 0.99, image: 'images/product_popcorn1.jpg', hasSizeSelection: true, hasQuantitySelection: true, detailPage: 'products_A.html' },
        { id: 'pop002', category: 'popcorn', name: 'Caramel Bliss', description: 'Sweet, crunchy caramel coating.', basePrice: 0.99, image: 'images/product_popcorn2.jpg', hasSizeSelection: true, hasQuantitySelection: true, detailPage: 'products_A.html' },
        { id: 'pop003', category: 'popcorn', name: 'Spicy Chili', description: 'Popcorn with a kick!', basePrice: 0.99, image: 'images/product_popcorn3.jpg', hasSizeSelection: true, hasQuantitySelection: true, detailPage: 'products_A.html' },
        { id: 'pop004', category: 'popcorn', name: 'Cheesy Cheddar', description: 'Savory cheddar cheese flavor.', basePrice: 0.99, image: 'images/product_popcorn4.jpg', hasSizeSelection: true, hasQuantitySelection: true, detailPage: 'products_A.html' },
-       // DIY Kits
        { id: 'diy001', category: 'diy', name: 'Popcorn Kernel Kit', description: 'Everything you need to pop at home.', basePrice: 0.99, image: 'images/product_diy1.jpg', hasSizeSelection: false, hasQuantitySelection: true, detailPage: 'products_B.html' },
        { id: 'diy002', category: 'diy', name: 'Seasoning Sampler', description: 'Variety pack of popcorn seasonings.', basePrice: 0.99, image: 'images/product_diy2.jpg', hasSizeSelection: false, hasQuantitySelection: true, detailPage: 'products_C.html' },
    ];
 
-   // --- DOM Elements ---
    const mainImage = document.getElementById('gallery-main-image');
    const thumbnailsContainer = document.getElementById('gallery-thumbnails');
    const thumbnails = thumbnailsContainer?.querySelectorAll('.thumbnail');
@@ -26,14 +20,11 @@ document.addEventListener('DOMContentLoaded', () => {
    const flavorSelect = document.getElementById('popcorn-flavor-select');
    const sizeOptionsContainer = productOptionsForm?.querySelector('.size-options');
    const productCurrentPrice = document.getElementById('product-current-price');
-   // Assume the container div for quantity elements has class="quantity-picker"
-   const productQuantityPicker = productOptionsForm?.querySelector('.quantity-picker'); // Corrected variable reference
+   const productQuantityPicker = productOptionsForm?.querySelector('.quantity-picker');
    const productQuantityInput = document.getElementById('product-quantity');
    const productQtyMinus = document.getElementById('product-qty-minus');
    const productQtyPlus = document.getElementById('product-qty-plus');
    const addToCartMessage = document.getElementById('add-to-cart-message');
-
-   // --- Cart Utilities ---
    const CART_KEY = 'shoppingCart';
 
    function getCart() {
@@ -66,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return price;
     }
 
-    function addToCart(productId, options = {}) { /* ... (Keep function as defined previously) ... */
+    function addToCart(productId, options = {}) {
         const product = getProductById(productId);
         if (!product) { console.error("Product not found:", productId); return; }
 
@@ -77,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let cartItemId;
 
         if (product.hasSizeSelection) {
-            size = options.size || '64oz'; // Default Popcorn size
+            size = options.size || '64oz';
             pricePerItem = calculatePrice(product, size);
             cartItemId = `${product.id}-${size}`;
         } else {
@@ -104,14 +95,11 @@ document.addEventListener('DOMContentLoaded', () => {
         displayConfirmation(`Added ${quantity} x ${product.name} (${size || 'Standard'}) to cart!`);
     }
 
-
-    // --- Image Gallery Logic ---
     const imageSources = thumbnails ? Array.from(thumbnails).map(thumb => thumb.src) : [];
     let currentIndex = 0;
 
     function updateGallery(index) {
         if (!mainImage || !thumbnails || thumbnails.length === 0 || index < 0 || index >= imageSources.length) {
-             // console.error("Gallery update aborted: Invalid index or missing elements."); // Keep console logging minimal unless debugging
              return;
         };
         currentIndex = index;
@@ -149,7 +137,6 @@ document.addEventListener('DOMContentLoaded', () => {
          }
     });
 
-    // Initialize gallery ONCE
     if (mainImage && imageSources.length > 0) {
         updateGallery(0);
     } else if (!mainImage) {
@@ -158,7 +145,6 @@ document.addEventListener('DOMContentLoaded', () => {
          console.warn("No thumbnail images found or image sources array is empty.");
     }
 
-    // --- Flavor Selection & Dynamic Info Update ---
     const popcornProducts = productData.filter(p => p.category === 'popcorn');
     let selectedProductId = null;
 
@@ -173,16 +159,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function updateProductDetails(productId) {
         const product = getProductById(productId);
-        // Only need to update selectedProductId and visibility/price now
         if (!product) {
             selectedProductId = null;
-            updateDisplayedPrice(); // Update price to placeholder
+            updateDisplayedPrice();
             return;
         }
 
         selectedProductId = productId;
 
-        // Show/Hide Size options based on selected product
         if (sizeOptionsContainer) {
             sizeOptionsContainer.style.display = product.hasSizeSelection ? 'block' : 'none';
              if (product.hasSizeSelection) {
@@ -190,19 +174,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (defaultRadio) defaultRadio.checked = true;
             }
         }
-        // Show/Hide Quantity picker - Use correct variable name
-         if (productQuantityPicker) { // Corrected variable name
+         if (productQuantityPicker) {
             productQuantityPicker.style.display = product.hasQuantitySelection ? 'flex' : 'none';
-            if (productQuantityInput) productQuantityInput.value = 1; // Reset quantity
+            if (productQuantityInput) productQuantityInput.value = 1;
         }
 
-        updateDisplayedPrice(); // Update price for the selected flavor/product
+        updateDisplayedPrice();
     }
 
     function updateDisplayedPrice() {
-        if (!productOptionsForm || !productCurrentPrice) return; // Ensure elements exist
-
-        if (!selectedProductId) { // If no flavor selected
+        if (!productOptionsForm || !productCurrentPrice) return;
+        if (!selectedProductId) {
             productCurrentPrice.textContent = "$--.--";
             return;
         }
@@ -216,30 +198,27 @@ document.addEventListener('DOMContentLoaded', () => {
         let pricePerItem;
         if (product.hasSizeSelection) {
             const selectedSizeInput = productOptionsForm.querySelector('input[name="size"]:checked');
-            const sizeValue = selectedSizeInput ? selectedSizeInput.value : '64oz'; // Popcorn default size
+            const sizeValue = selectedSizeInput ? selectedSizeInput.value : '64oz';
             pricePerItem = calculatePrice(product, sizeValue);
         } else {
-             pricePerItem = calculatePrice(product, null); // For non-sized items (DIY)
+             pricePerItem = calculatePrice(product, null);
         }
 
         const quantity = productQuantityInput ? Math.max(1, parseInt(productQuantityInput.value, 10) || 1) : 1;
         productCurrentPrice.textContent = formatPrice(pricePerItem * quantity);
     }
 
-    // Listener for Flavor Change
     flavorSelect?.addEventListener('change', (e) => {
         if (e.target.value) {
             updateProductDetails(e.target.value);
         } else {
              selectedProductId = null;
-             // Hide options if "-- Select --" is chosen
              if(sizeOptionsContainer) sizeOptionsContainer.style.display = 'none';
-             if(productQuantityPicker) productQuantityPicker.style.display = 'none'; // Corrected variable
-             updateDisplayedPrice(); // Show price placeholder
+             if(productQuantityPicker) productQuantityPicker.style.display = 'none';
+             updateDisplayedPrice();
         }
     });
 
-    // Listeners for Size & Quantity
     productOptionsForm?.addEventListener('change', (e) => {
         if (selectedProductId && e.target.name === 'size') {
             updateDisplayedPrice();
@@ -251,13 +230,10 @@ document.addEventListener('DOMContentLoaded', () => {
              updateDisplayedPrice();
         }
     });
-    // Corrected Quantity Button Listeners to check selectedProductId
     productQtyMinus?.addEventListener('click', () => { if (selectedProductId && productQuantityInput && productQuantityInput.value > 1) { productQuantityInput.value--; updateDisplayedPrice(); }});
     productQtyPlus?.addEventListener('click', () => { if (selectedProductId && productQuantityInput) { productQuantityInput.value++; updateDisplayedPrice(); }});
 
-
-    // --- Add to Cart Form Submission ---
-    function displayConfirmation(message) { /* ... (Keep function as defined previously) ... */
+    function displayConfirmation(message) {
         if (addToCartMessage) {
              addToCartMessage.textContent = message;
              addToCartMessage.className = 'form-message success';
@@ -271,7 +247,7 @@ document.addEventListener('DOMContentLoaded', () => {
      }
 
 
-    productOptionsForm?.addEventListener('submit', (e) => { /* ... (Keep function as defined previously) ... */
+    productOptionsForm?.addEventListener('submit', (e) => {
          e.preventDefault();
          if (!selectedProductId) {
              displayConfirmation("Please select a flavor/item first.");
@@ -300,13 +276,10 @@ document.addEventListener('DOMContentLoaded', () => {
          addToCart(selectedProductId, options);
      });
 
-
-    // --- Initial Setup ---
     populateFlavorSelector();
-    // Hide options initially
     if(sizeOptionsContainer) sizeOptionsContainer.style.display = 'none';
-    if(productQuantityPicker) productQuantityPicker.style.display = 'none'; // Corrected variable
-    updateDisplayedPrice(); // Show initial price placeholder
+    if(productQuantityPicker) productQuantityPicker.style.display = 'none';
+    updateDisplayedPrice();
 
     const reviewForm = document.getElementById('review-form');
     const reviewFormMessage = document.getElementById('review-form-message');
@@ -317,7 +290,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const commentInput = document.getElementById('review-comment');
 
         if (nameInput.value.trim() && commentInput.value.trim()) {
-            // Chỉ mô phỏng việc gửi thành công
             if (reviewFormMessage) {
                 reviewFormMessage.textContent = 'Cảm ơn bạn đã gửi nhận xét!';
                 reviewFormMessage.className = 'form-message success';

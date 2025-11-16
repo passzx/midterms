@@ -1,14 +1,9 @@
-/* --- product_detail.css - Styles for Product Detail Pages --- */
-
-/* --- Variables --- */
 :root {
     --header-height: 75px;
     --primary-color: #3498db;
     --text-color: #333;
     --border-color: #e0e0e0;
   }
-  
-  /* --- Layout --- */
   
   .product-detail-page {
     padding: 25px 0;
@@ -22,8 +17,6 @@
     padding: 0 15px;
     align-items: flex-start;
   }
-  
-  /* --- Image Gallery --- */
   
   .product-image-gallery {
     flex-basis: 50%;
@@ -62,7 +55,6 @@
   }
   
   .thumbnail {
-    /* Simplified selector */
     width: 60px;
     height: 60px;
     object-fit: cover;
@@ -100,8 +92,6 @@
     background-color: #ddd;
   }
   
-  /* --- Product Info --- */
-  
   .product-info-details {
     flex-basis: 50%;
   }
@@ -120,8 +110,6 @@
     border-left: 3px solid var(--primary-color);
     padding-left: 15px;
   }
-  
-  /* --- Form Elements --- */
   
   .product-info-details .size-options {
     margin-bottom: 30px;
@@ -168,8 +156,6 @@
     margin-top: 30px;
   }
   
-  /* --- Form Messages --- */
-  
   .form-message {
     margin-top: 15px;
     text-align: center;
@@ -185,8 +171,6 @@
     color: #dc3545;
   }
   
-  /* --- Footer --- */
-  
   .main-footer {
     background-color: rgba(50, 50, 50, 0.8);
     color: #ffffff;
@@ -201,8 +185,6 @@
     opacity: 0.5;
     font-style: italic;
   }
-  
-  /* --- Responsive --- */
   
   @media (max-width: 768px) {
     .product-detail-container {
@@ -226,7 +208,6 @@
     }
   }
   
-/* Mã sản phẩm */
 .product-sku {
   font-size: 0.9em;
   color: #777;
@@ -234,7 +215,6 @@
   margin-bottom: 20px;
 }
 
-/* Chia sẻ SNS */
 .product-share {
   display: flex;
   align-items: center;
@@ -259,7 +239,6 @@
   transform: scale(1.1);
 }
 
-/* Khu vực Đánh giá */
 .product-reviews-section {
   padding: 30px 0;
   margin-top: 30px;
@@ -277,7 +256,6 @@
   color: var(--primary-color);
 }
 
-/* Danh sách đánh giá */
 .reviews-list {
   margin-bottom: 30px;
 }
@@ -302,7 +280,6 @@
   color: #888;
 }
 
-/* Form đánh giá */
 .review-form h3 {
   font-size: 1.4em;
   margin-bottom: 20px;
@@ -324,7 +301,7 @@
   border-radius: 4px;
   font-size: 1em;
   box-sizing: border-box;
-  font-family: inherit; /* Đảm bảo font chữ nhất quán */
+  font-family: inherit;
 }
 .review-form textarea {
   resize: vertical;
@@ -337,7 +314,6 @@
   flex: 1;
 }
 
-/* Điều chỉnh responsive cho mục mới */
 @media (max-width: 768px) {
   .product-reviews-section h2 {
     font-size: 1.6em;

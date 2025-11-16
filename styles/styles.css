@@ -319,12 +319,12 @@ button:hover,
   font-size: 0.9em;
   outline: none;
   background-color: transparent;
-  width: 150px; /* Bạn có thể điều chỉnh độ rộng */
+  width: 150px;
   transition: width 0.3s ease;
 }
 
 .nav-search-input:focus {
-  width: 200px; /* Rộng ra khi người dùng click vào */
+  width: 200px;
 }
 
 .nav-search-btn {
@@ -339,11 +339,10 @@ button:hover,
 
 .nav-search-btn:hover {
   background: #e0e0e0;
-  transform: none; /* Ghi đè hiệu ứng hover của button chung */
+  transform: none;
   color: var(--primary-color);
 }
 
-/* Ẩn ô tìm kiếm trên mobile (vì nav-right bị ẩn) */
 @media (max-width: 992px) {
   .nav-search-form {
     display: none;

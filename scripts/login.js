@@ -42,12 +42,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const user = accounts[username];
     if (user) {
       userInfoUsername.textContent = username;
-      // ĐÃ DỊCH
       userInfoPhone.textContent = user.phone || 'Không có sẵn';
       loginFormPanel.classList.add('logged-in');
       clearMessage(userInfoMessage);
     } else {
-      // ĐÃ DỊCH
       console.error('Không tìm thấy dữ liệu người dùng:', username);
       logout();
     }
@@ -73,7 +71,6 @@ document.addEventListener('DOMContentLoaded', () => {
   showLoginBtn?.addEventListener('click', () => switchForm(true));
   showRegisterBtn?.addEventListener('click', () => switchForm(false));
 
-  // ĐÃ DỊCH
   forgotPasswordLink?.addEventListener('click', (e) => {
     e.preventDefault();
     if (confirm('Đây chỉ là một mô phỏng, vì vậy rất tiếc chúng tôi không thể cung cấp dịch vụ này ngay bây giờ.\n\nTuy nhiên, bạn có thể xóa sạch localStorage, xóa tất cả các tài khoản mô phỏng!\n\nXóa tất cả tài khoản?')) {
@@ -83,7 +80,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // ĐÃ DỊCH
   loginForm?.addEventListener('submit', (e) => {
     e.preventDefault();
     clearMessage(loginMessage);
@@ -103,7 +99,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // ĐÃ DỊCH
   registerForm?.addEventListener('submit', (e) => {
     e.preventDefault();
     clearMessage(registerMessage);
@@ -134,7 +129,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   logoutBtn?.addEventListener('click', logout);
 
-  // ĐÃ DỊCH
   deleteAccountBtn?.addEventListener('click', () => {
     if (confirm('Bạn có chắc chắn muốn xóa tài khoản của mình? Hành động này không thể hoàn tác.')) {
       const user = sessionStorage.getItem(LOGGED_IN_USER_KEY);

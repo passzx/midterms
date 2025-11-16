@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // ĐÃ DỊCH MÔ TẢ (DESCRIPTION)
     const productData = [
         { id: 'deal001', category: 'deals', name: 'Night For 2', description: 'Gói bao gồm: 2x Bắp rang 105oz (chọn vị) + 1x Nước 42oz (chọn loại).', basePrice: 2.99, image: 'images/deal_night.jpg', hasSizeSelection: false, hasQuantitySelection: false, hasPopcornChoice: true, hasDrinkChoice: true, popcornCount: 2, popcornSize: '105oz', drinkCount: 1, drinkSize: '42oz' },
         { id: 'deal002', category: 'deals', name: 'Solo Watcher', description: 'Gói bao gồm: 1x Bắp rang 105oz (chọn vị) + 1x Nước 30oz (chọn loại).', basePrice: 1.99, image: 'images/deal_solo.jpg', hasSizeSelection: false, hasQuantitySelection: false, hasPopcornChoice: true, hasDrinkChoice: true, popcornCount: 1, popcornSize: '105oz', drinkCount: 1, drinkSize: '30oz' },
@@ -121,7 +120,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 let customization = '';
                 if (item.size && !item.isDealComponent) {
-                    // ĐÃ DỊCH
                     customization = `Kích cỡ: ${item.size}`;
                 } else if (item.popcornChoice || item.drinkChoice) {
                      customization = [item.popcornChoice, item.drinkChoice].filter(Boolean).join(', ');
@@ -233,7 +231,6 @@ document.addEventListener('DOMContentLoaded', () => {
             } else if (product.category === 'deals' && product.hasQuantitySelection) {
                  cart[cartItemId].quantity += quantity;
             } else {
-                // ĐÃ DỊCH
                 console.warn("Số lượng mặt hàng không thể thay đổi hoặc mặt hàng đã có trong giỏ hàng.");
                 alert(`${product.name} chỉ được mua 1 lần.`);
                 return;
@@ -316,22 +313,18 @@ document.addEventListener('DOMContentLoaded', () => {
        currentModalProductId = productId;
 
        modalProductImage.src = product.image;
-       // ĐÃ DỊCH
        modalProductImage.alt = product.name;
        modalProductName.textContent = product.name;
-       modalProductDescription.textContent = product.description; // Mô tả đã được dịch ở productData
+       modalProductDescription.textContent = product.description;
 
         modalDetailLinkContainer.innerHTML = '';
         if (product.detailPage) {
             const detailLink = document.createElement('a');
             detailLink.href = product.detailPage;
-            // ĐÃ DỊCH
             detailLink.textContent = 'Xem chi tiết đầy đủ';
             detailLink.className = 'modal-detail-link';
             modalDetailLinkContainer.appendChild(detailLink);
         }
-
-       // --- Đặt lại và Cấu hình Tùy chọn Modal ---
 
        const showSize = product.hasSizeSelection;
        const showQty = product.hasQuantitySelection;
@@ -346,7 +339,6 @@ document.addEventListener('DOMContentLoaded', () => {
        modalDealPopcornChoice.parentElement.style.display = showPopcorn ? 'block' : 'none';
        modalDealDrinkChoice.parentElement.style.display = showDrink ? 'block' : 'none';
 
-       // Điền tùy chọn Kích cỡ (ĐÃ DỊCH)
        if (showSize) {
         const sizeFieldset = modalSizeOptionsContainer;
         sizeFieldset.innerHTML = '<legend>Chọn kích cỡ:</legend>';
@@ -385,7 +377,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-       // Điền lựa chọn Gói (Popcorn/Drink)
         const popcornProducts = productData.filter(p => p.category === 'popcorn');
         const drinkProducts = productData.filter(p => p.category === 'drinks');
 
@@ -451,8 +442,6 @@ document.addEventListener('DOMContentLoaded', () => {
     closeModal();
     });
 
-    // --- Event Listeners ---
-
     modalCloseBtn?.addEventListener('click', closeModal);
     modalOverlay?.addEventListener('click', closeModal);
 
@@ -508,7 +497,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ĐÃ DỊCH
     const checkoutBtn = document.getElementById('checkout-btn');
     checkoutBtn?.addEventListener('click', () => {
         const cart = getCart();
@@ -518,9 +506,6 @@ document.addEventListener('DOMContentLoaded', () => {
         } else window.location.href = 'cart.html';
     });
 
-
-    // --- Initial Setup ---
     renderProducts();
     renderCart();
-
 });

@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // ĐÃ DỊCH MÔ TẢ (DESCRIPTION) CỦA SẢN PHẨM
     const productData = [
         { id: 'deal001', category: 'deals', name: 'Night For 2', description: 'Gói bao gồm: 2x Bắp rang 105oz (chọn vị) + 1x Nước 42oz (chọn loại).', basePrice: 2.99, image: 'images/deal_night.jpg', hasSizeSelection: false, hasQuantitySelection: false, hasPopcornChoice: true, hasDrinkChoice: true, popcornCount: 2, popcornSize: '105oz', drinkCount: 1, drinkSize: '42oz' },
         { id: 'deal002', category: 'deals', name: 'Solo Watcher', description: 'Gói bao gồm: 1x Bắp rang 105oz (chọn vị) + 1x Nước 30oz (chọn loại).', basePrice: 1.99, image: 'images/deal_solo.jpg', hasSizeSelection: false, hasQuantitySelection: false, hasPopcornChoice: true, hasDrinkChoice: true, popcornCount: 1, popcornSize: '105oz', drinkCount: 1, drinkSize: '30oz' },
@@ -17,13 +16,11 @@ document.addEventListener('DOMContentLoaded', () => {
         { id: 'diy002', category: 'diy', name: 'Seasoning Sampler', description: 'Gói tổng hợp các loại gia vị bắp rang bơ.', basePrice: 0.99, image: 'images/product_diy2.jpg', hasSizeSelection: false, hasQuantitySelection: true },
     ];
 
-    // Lấy các DOM elements
     const cartItemsDetailedList = document.getElementById('cart-items-detailed-list');
     const cartDetailedEmptyMessage = document.getElementById('cart-detailed-empty-message');
     const suggestionsList = document.getElementById('suggestions-list');
     const checkoutBtnDetailed = document.getElementById('checkout-btn-detailed');
 
-    // Các elements mới cho Giảm giá và Tổng tiền
     const cartSubtotalPriceDetailed = document.getElementById('cart-subtotal-price-detailed');
     const cartTotalPriceDetailed = document.getElementById('cart-total-price-detailed');
     const discountCodeInput = document.getElementById('discount-code-input');
@@ -32,13 +29,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const discountRow = document.querySelector('.discount-row');
     const cartDiscountAmountDetailed = document.getElementById('cart-discount-amount-detailed');
     
-    // Nút PayPal mới
     const paypalCheckoutBtn = document.getElementById('paypal-checkout-btn');
 
     const CART_KEY = 'shoppingCart';
-    let currentDiscountPercent = 0; // Biến lưu trữ % giảm giá
+    let currentDiscountPercent = 0;
 
-    // --- Các hàm xử lý Cart ---
     function getCart() {
         const cartJson = localStorage.getItem(CART_KEY);
         try { return cartJson ? JSON.parse(cartJson) : {}; }
@@ -61,7 +56,6 @@ document.addEventListener('DOMContentLoaded', () => {
         return productData.find(product => product.id === id) || null;
     }
 
-    // --- HÀM TÍNH TỔNG TIỀN ---
     function updateCartTotalDetailed() {
         const cart = getCart();
         let subtotal = 0;
@@ -93,7 +87,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // --- HÀM RENDER GIỎ HÀNG ---
     function renderDetailedCart() {
         if (!cartItemsDetailedList || !cartDetailedEmptyMessage) {
             console.error("Không tìm thấy danh sách giỏ hàng hoặc phần tử tin nhắn trống");
@@ -122,7 +115,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 let customization = '';
                 if (item.size && !item.isDealComponent) {
-                    // ĐÃ DỊCH
                     customization = `Kích cỡ: ${item.size}`;
                 } else if (item.popcornChoice || item.drinkChoice) {
                      customization = [item.popcornChoice, item.drinkChoice].filter(Boolean).join(', ');
@@ -155,7 +147,6 @@ document.addEventListener('DOMContentLoaded', () => {
         updateCartTotalDetailed();
     }
 
-    // --- Các hàm cập nhật số lượng ---
     function updateCartItemQuantity(cartItemId, newValue) {
         const cart = getCart();
         if (cart[cartItemId]) {
@@ -196,7 +187,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // --- HÀM RENDER GỢI Ý ---
     function renderSuggestions() {
         if (!suggestionsList) {
             console.error("Không tìm thấy phần tử danh sách gợi ý trong cart.html");
@@ -224,7 +214,6 @@ document.addEventListener('DOMContentLoaded', () => {
             suggestions.forEach(product => {
                 const suggestionElement = document.createElement('div');
                 suggestionElement.className = 'suggestion-item';
-                // ĐÃ DỊCH
                 suggestionElement.innerHTML = `
                     <img src="${product.image}" alt="${product.name}">
                     <span class="suggestion-name">${product.name}</span>
@@ -233,12 +222,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 suggestionsList.appendChild(suggestionElement);
             });
         } else {
-            // ĐÃ DỊCH
             suggestionsList.innerHTML = '<p>Hiện không có gợi ý nào!</p>';
         }
     }
 
-    // --- CÁC EVENT LISTENERS ---
     cartItemsDetailedList?.addEventListener('click', (e) => {
         const target = e.target;
         const cartItem = target.closest('.cart-item-detailed');
@@ -269,24 +256,23 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Nút áp dụng mã (ĐÃ DỊCH)
     applyDiscountBtn?.addEventListener('click', () => {
         const code = discountCodeInput.value.trim().toUpperCase();
         
         if (code === 'SALE10') {
-            currentDiscountPercent = 0.10; // Giảm 10%
+            currentDiscountPercent = 0.10;
             if(discountMessage) {
                 discountMessage.textContent = 'Đã áp dụng giảm giá 10%!';
                 discountMessage.className = 'form-message success';
             }
         } else if (code === 'POPCORN') {
-            currentDiscountPercent = 0.05; // Giảm 5%
+            currentDiscountPercent = 0.05;
             if(discountMessage) {
                 discountMessage.textContent = 'Đã áp dụng giảm giá 5%!';
                 discountMessage.className = 'form-message success';
             }
         } else {
-            currentDiscountPercent = 0; // Mã không hợp lệ
+            currentDiscountPercent = 0;
             if(discountMessage) {
                 discountMessage.textContent = 'Mã giảm giá không hợp lệ.';
                 discountMessage.className = 'form-message error';
@@ -295,7 +281,6 @@ document.addEventListener('DOMContentLoaded', () => {
         updateCartTotalDetailed();
     });
 
-    // Nút PayPal (ĐÃ DỊCH)
     paypalCheckoutBtn?.addEventListener('click', () => {
         const cart = getCart();
         if (Object.keys(cart).length === 0) {
@@ -306,7 +291,6 @@ document.addEventListener('DOMContentLoaded', () => {
         alert(`Chuyển đến PayPal để thanh toán... (Mô phỏng). Tổng: ${totalText}`);
     });
 
-    // Cập nhật nút checkout cũ (ĐÃ DỊCH)
     checkoutBtnDetailed?.addEventListener('click', () => {
         const cart = getCart();
         if (Object.keys(cart).length === 0) {
@@ -317,16 +301,12 @@ document.addEventListener('DOMContentLoaded', () => {
         alert(`Tiến hành thanh toán (Mô phỏng). Tổng: ${totalText}`);
     });
 
-
-    // --- KHỞI CHẠY ---
     if (typeof productData !== 'undefined' && productData.length > 0) {
         renderDetailedCart();
         renderSuggestions();
     } else {
-        // ĐÃ DỊCH
         console.error("Không thể hiển thị trang: productData bị thiếu!");
          if(cartItemsDetailedList) cartItemsDetailedList.innerHTML = '<p style="color: red;">Lỗi tải dữ liệu sản phẩm. Không thể hiển thị giỏ hàng.</p>';
          if(suggestionsList) suggestionsList.innerHTML = '<p style="color: red;">Lỗi tải dữ liệu sản phẩm. Không thể hiển thị gợi ý.</p>';
     }
-
 });

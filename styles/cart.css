@@ -179,7 +179,6 @@
 }
 
 .checkout-btn-detailed {
-     /* Reuse global button style */
     display: block;
     width: 100%;
     padding: 15px;
@@ -236,7 +235,6 @@
 }
 
 .suggestion-item .suggestion-add-btn {
-     /* Reuse global .button style */
      padding: 5px 10px;
      font-size: 0.85em;
      flex-shrink: 0;
@@ -276,9 +274,6 @@
      .suggested-items-area h2 { font-size: 1.2em; }
 }
 
-/* === THÊM VÀO CUỐI TỆP styles/cart.css === */
-
-/* Mã giảm giá */
 .discount-section {
     padding-bottom: 20px;
     margin-bottom: 20px;
@@ -305,14 +300,12 @@
     padding: 10px 15px;
     font-size: 0.9em;
     flex-shrink: 0;
-    transform: none; /* Bỏ hiệu ứng hover scale */
+    transform: none;
   }
   .discount-input-group button:hover {
-    transform: none; /* Bỏ hiệu ứng hover scale */
+    transform: none;
   }
   
-  
-  /* Tin nhắn form (để hiển thị lỗi/thành công) */
   .form-message {
     margin-top: 10px;
     font-size: 0.9em;
@@ -326,7 +319,6 @@
     color: #dc3545;
   }
   
-  /* Cập nhật hiển thị Tổng */
   .cart-total-detailed.discount-row {
     font-size: 1.1em;
     color: #28a745;
@@ -336,13 +328,11 @@
     font-size: 1.3em;
     font-weight: bold;
   }
-  /* Đổi màu số tiền tổng */
+
   .cart-total-detailed.final-total #cart-total-price-detailed {
     color: var(--primary-color, #3498db);
   }
   
-  
-  /* Nút PayPal */
   .paypal-divider {
     text-align: center;
     margin: 15px 0;
@@ -362,8 +352,8 @@
   
   .paypal-btn {
     width: 100%;
-    background-color: #ffc439; /* Màu của PayPal */
-    color: #00457c; /* Màu chữ của PayPal */
+    background-color: #ffc439;
+    color: #00457c;
     font-weight: bold;
     padding: 15px;
     font-size: 1.2em;
