@@ -102,3 +102,150 @@
     font-size: 2.2em;
   }
 }
+
+/* --- Slider Section --- */
+.slider-section {
+  width: 100%;
+  height: 450px; /* Điều chỉnh chiều cao mong muốn */
+  position: relative;
+  overflow: hidden;
+  background-color: #eee;
+}
+
+.slider-wrapper {
+  /* Chiều rộng sẽ được JS đặt (ví dụ: 300% cho 3 slide) */
+  height: 100%;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  width: 100%; /* Mỗi slide chiếm 100% chiều rộng của wrapper */
+  height: 100%;
+  position: relative;
+  flex-shrink: 0; /* Đảm bảo slide không bị co lại */
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7); /* Làm ảnh tối đi một chút để nổi bật chữ */
+}
+
+.slide-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+  width: 90%;
+  max-width: 600px;
+}
+
+.slide-caption h2 {
+  font-size: 2.5em;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.slide-caption p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.slider-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1.5em;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.slider-nav:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  transform: translateY(-50%); /* Ghi đè hover của button chung */
+}
+
+.slider-nav.prev {
+  left: 15px;
+}
+
+.slider-nav.next {
+  right: 15px;
+}
+
+.slider-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.dot.active {
+  background-color: white;
+}
+
+/* --- Map Section (Tách ra từ hero) --- */
+.map-section {
+  padding: 20px 0 40px 0;
+  text-align: center;
+}
+
+.map-section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+/* Ghi đè/Chỉnh sửa CSS cũ trong styles/index.css */
+/* Xóa bỏ bản đồ khỏi hero-content cũ */
+.hero-content .map-container {
+  display: none;
+}
+
+/* Đảm bảo hero-section vẫn hoạt động tốt mà không có bản đồ */
+.hero-section {
+  padding-bottom: 20px; /* Giảm padding dưới nếu cần */
+}
+
+/* Điều chỉnh cho màn hình nhỏ */
+@media (max-width: 600px) {
+  .slider-section {
+    height: 300px;
+  }
+  .slide-caption h2 {
+    font-size: 1.8em;
+  }
+  .slide-caption p {
+    font-size: 1em;
+    margin-bottom: 15px;
+  }
+  .slide-caption .button {
+    padding: 8px 12px;
+    font-size: 0.9em;
+  }
+}

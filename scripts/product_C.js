@@ -140,4 +140,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updateDisplayedPrice();
 
+    const reviewForm = document.getElementById('review-form');
+    const reviewFormMessage = document.getElementById('review-form-message');
+
+    reviewForm?.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const nameInput = document.getElementById('review-name');
+        const commentInput = document.getElementById('review-comment');
+
+        if (nameInput.value.trim() && commentInput.value.trim()) {
+            // Chỉ mô phỏng việc gửi thành công
+            if (reviewFormMessage) {
+                reviewFormMessage.textContent = 'Cảm ơn bạn đã gửi nhận xét!';
+                reviewFormMessage.className = 'form-message success';
+            }
+            reviewForm.reset();
+            setTimeout(() => {
+                if (reviewFormMessage) {
+                    reviewFormMessage.textContent = '';
+                    reviewFormMessage.className = 'form-message';
+                }
+            }, 3000);
+        } else {
+            if (reviewFormMessage) {
+                reviewFormMessage.textContent = 'Vui lòng nhập tên và nhận xét của bạn.';
+                reviewFormMessage.className = 'form-message error';
+            }
+        }
+    });
 });

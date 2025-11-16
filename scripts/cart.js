@@ -1,33 +1,48 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    // ĐÃ DỊCH MÔ TẢ (DESCRIPTION) CỦA SẢN PHẨM
     const productData = [
-        { id: 'deal001', category: 'deals', name: 'Night For 2', description: 'Deal includes: 2x 105oz Popcorn (choose flavor) + 1x 42oz Drink (choose type).', basePrice: 2.99, image: 'images/deal_night.jpg', hasSizeSelection: false, hasQuantitySelection: false, hasPopcornChoice: true, hasDrinkChoice: true, popcornCount: 2, popcornSize: '105oz', drinkCount: 1, drinkSize: '42oz' },
-        { id: 'deal002', category: 'deals', name: 'Solo Watcher', description: 'Deal includes: 1x 105oz Popcorn (choose flavor) + 1x 30oz Drink (choose type).', basePrice: 1.99, image: 'images/deal_solo.jpg', hasSizeSelection: false, hasQuantitySelection: false, hasPopcornChoice: true, hasDrinkChoice: true, popcornCount: 1, popcornSize: '105oz', drinkCount: 1, drinkSize: '30oz' },
-        { id: 'deal003', category: 'deals', name: 'Seasoned Popcorn Maker', description: 'Deal includes: 1x Popcorn Kernel Kit + 1x Seasoning Sampler.', basePrice: 1.49, image: 'images/deal_diy.jpg', hasSizeSelection: false, hasQuantitySelection: true, hasPopcornChoice: false, hasDrinkChoice: false },
-        { id: 'pop001', category: 'popcorn', name: 'Buttery Classic', description: 'Warm, buttery, and irresistible.', basePrice: 0.99, image: 'images/product_popcorn1.jpg', hasSizeSelection: true, hasQuantitySelection: true },
-        { id: 'pop002', category: 'popcorn', name: 'Caramel Bliss', description: 'Sweet, crunchy caramel coating.', basePrice: 0.99, image: 'images/product_popcorn2.jpg', hasSizeSelection: true, hasQuantitySelection: true },
-        { id: 'pop003', category: 'popcorn', name: 'Spicy Chili', description: 'Popcorn with a kick!', basePrice: 0.99, image: 'images/product_popcorn3.jpg', hasSizeSelection: true, hasQuantitySelection: true },
-        { id: 'pop004', category: 'popcorn', name: 'Cheesy Cheddar', description: 'Savory cheddar cheese flavor.', basePrice: 0.99, image: 'images/product_popcorn4.jpg', hasSizeSelection: true, hasQuantitySelection: true },
-        { id: 'drk001', category: 'drinks', name: 'Coca-Cola', description: 'The standard bubbly refreshment.', basePrice: 0.75, image: 'images/product_drink1.jpg', hasSizeSelection: true, hasQuantitySelection: true },
-        { id: 'drk002', category: 'drinks', name: 'Lipton Iced Tea', description: 'Refreshing classic iced tea.', basePrice: 0.75, image: 'images/product_drink2.jpg', hasSizeSelection: true, hasQuantitySelection: true },
-        { id: 'drk003', category: 'drinks', name: 'Tropicana Twister', description: 'Freshly squeezed Vitamin C.', basePrice: 0.75, image: 'images/product_drink3.jpg', hasSizeSelection: true, hasQuantitySelection: true },
-        { id: 'drk004', category: 'drinks', name: 'Aquafina', description: 'Pure and simple hydration.', basePrice: 0.75, image: 'images/product_drink4.jpg', hasSizeSelection: true, hasQuantitySelection: true },
-        { id: 'diy001', category: 'diy', name: 'Popcorn Kernel Kit', description: 'Everything you need to pop at home.', basePrice: 0.99, image: 'images/product_diy1.jpg', hasSizeSelection: false, hasQuantitySelection: true },
-        { id: 'diy002', category: 'diy', name: 'Seasoning Sampler', description: 'Variety pack of popcorn seasonings.', basePrice: 0.99, image: 'images/product_diy2.jpg', hasSizeSelection: false, hasQuantitySelection: true },
+        { id: 'deal001', category: 'deals', name: 'Night For 2', description: 'Gói bao gồm: 2x Bắp rang 105oz (chọn vị) + 1x Nước 42oz (chọn loại).', basePrice: 2.99, image: 'images/deal_night.jpg', hasSizeSelection: false, hasQuantitySelection: false, hasPopcornChoice: true, hasDrinkChoice: true, popcornCount: 2, popcornSize: '105oz', drinkCount: 1, drinkSize: '42oz' },
+        { id: 'deal002', category: 'deals', name: 'Solo Watcher', description: 'Gói bao gồm: 1x Bắp rang 105oz (chọn vị) + 1x Nước 30oz (chọn loại).', basePrice: 1.99, image: 'images/deal_solo.jpg', hasSizeSelection: false, hasQuantitySelection: false, hasPopcornChoice: true, hasDrinkChoice: true, popcornCount: 1, popcornSize: '105oz', drinkCount: 1, drinkSize: '30oz' },
+        { id: 'deal003', category: 'deals', name: 'Seasoned Popcorn Maker', description: 'Gói bao gồm: 1x Bộ Hạt Bắp + 1x Bộ Gia Vị Thử.', basePrice: 1.49, image: 'images/deal_diy.jpg', hasSizeSelection: false, hasQuantitySelection: true, hasPopcornChoice: false, hasDrinkChoice: false },
+        { id: 'pop001', category: 'popcorn', name: 'Buttery Classic', description: 'Ấm áp, béo ngậy mùi bơ, không thể cưỡng lại.', basePrice: 0.99, image: 'images/product_popcorn1.jpg', hasSizeSelection: true, hasQuantitySelection: true },
+        { id: 'pop002', category: 'popcorn', name: 'Caramel Bliss', description: 'Lớp phủ caramen ngọt ngào, giòn tan.', basePrice: 0.99, image: 'images/product_popcorn2.jpg', hasSizeSelection: true, hasQuantitySelection: true },
+        { id: 'pop003', category: 'popcorn', name: 'Spicy Chili', description: 'Bắp rang bơ với một cú hích cay nồng!', basePrice: 0.99, image: 'images/product_popcorn3.jpg', hasSizeSelection: true, hasQuantitySelection: true },
+        { id: 'pop004', category: 'popcorn', name: 'Cheesy Cheddar', description: 'Hương vị phô mai cheddar đậm đà.', basePrice: 0.99, image: 'images/product_popcorn4.jpg', hasSizeSelection: true, hasQuantitySelection: true },
+        { id: 'drk001', category: 'drinks', name: 'Coca-Cola', description: 'Sự sảng khoái sủi bọt tiêu chuẩn.', basePrice: 0.75, image: 'images/product_drink1.jpg', hasSizeSelection: true, hasQuantitySelection: true },
+        { id: 'drk002', category: 'drinks', name: 'Lipton Iced Tea', description: 'Trà đá cổ điển sảng khoái.', basePrice: 0.75, image: 'images/product_drink2.jpg', hasSizeSelection: true, hasQuantitySelection: true },
+        { id: 'drk003', category: 'drinks', name: 'Tropicana Twister', description: 'Vitamin C tươi vắt.', basePrice: 0.75, image: 'images/product_drink3.jpg', hasSizeSelection: true, hasQuantitySelection: true },
+        { id: 'drk004', category: 'drinks', name: 'Aquafina', description: 'Sự hydrat hóa tinh khiết và đơn giản.', basePrice: 0.75, image: 'images/product_drink4.jpg', hasSizeSelection: true, hasQuantitySelection: true },
+        { id: 'diy001', category: 'diy', name: 'Popcorn Kernel Kit', description: 'Mọi thứ bạn cần để tự nổ bắp tại nhà.', basePrice: 0.99, image: 'images/product_diy1.jpg', hasSizeSelection: false, hasQuantitySelection: true },
+        { id: 'diy002', category: 'diy', name: 'Seasoning Sampler', description: 'Gói tổng hợp các loại gia vị bắp rang bơ.', basePrice: 0.99, image: 'images/product_diy2.jpg', hasSizeSelection: false, hasQuantitySelection: true },
     ];
 
+    // Lấy các DOM elements
     const cartItemsDetailedList = document.getElementById('cart-items-detailed-list');
     const cartDetailedEmptyMessage = document.getElementById('cart-detailed-empty-message');
-    const cartTotalPriceDetailed = document.getElementById('cart-total-price-detailed');
     const suggestionsList = document.getElementById('suggestions-list');
     const checkoutBtnDetailed = document.getElementById('checkout-btn-detailed');
 
-    const CART_KEY = 'shoppingCart';
+    // Các elements mới cho Giảm giá và Tổng tiền
+    const cartSubtotalPriceDetailed = document.getElementById('cart-subtotal-price-detailed');
+    const cartTotalPriceDetailed = document.getElementById('cart-total-price-detailed');
+    const discountCodeInput = document.getElementById('discount-code-input');
+    const applyDiscountBtn = document.getElementById('apply-discount-btn');
+    const discountMessage = document.getElementById('discount-message');
+    const discountRow = document.querySelector('.discount-row');
+    const cartDiscountAmountDetailed = document.getElementById('cart-discount-amount-detailed');
+    
+    // Nút PayPal mới
+    const paypalCheckoutBtn = document.getElementById('paypal-checkout-btn');
 
+    const CART_KEY = 'shoppingCart';
+    let currentDiscountPercent = 0; // Biến lưu trữ % giảm giá
+
+    // --- Các hàm xử lý Cart ---
     function getCart() {
         const cartJson = localStorage.getItem(CART_KEY);
         try { return cartJson ? JSON.parse(cartJson) : {}; }
-        catch (e) { console.error("Error parsing cart JSON", e); return {}; }
+        catch (e) { console.error("Lỗi phân tích JSON của giỏ hàng", e); return {}; }
     }
 
     function saveCart(cart) {
@@ -37,8 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function formatPrice(price) {
         const numericPrice = Number(price);
         if (isNaN(numericPrice)) {
-             // console.warn("formatPrice received non-numeric value:", price);
-            return "$NaN"; // Or return a default like "$0.00"
+            return "$NaN";
         }
         return `$${numericPrice.toFixed(2)}`;
     }
@@ -47,23 +61,42 @@ document.addEventListener('DOMContentLoaded', () => {
         return productData.find(product => product.id === id) || null;
     }
 
+    // --- HÀM TÍNH TỔNG TIỀN ---
     function updateCartTotalDetailed() {
         const cart = getCart();
-        let total = 0;
+        let subtotal = 0;
         for (const cartItemId in cart) {
             const item = cart[cartItemId];
             const price = Number(item.pricePerItem) || 0;
             const quantity = Number(item.quantity) || 0;
-            total += price * quantity;
+            subtotal += price * quantity;
         }
+
+        const discountAmount = subtotal * currentDiscountPercent;
+        const total = subtotal - discountAmount;
+
+        if (cartSubtotalPriceDetailed) {
+            cartSubtotalPriceDetailed.textContent = formatPrice(subtotal);
+        }
+
+        if (discountRow && cartDiscountAmountDetailed) {
+            if (discountAmount > 0) {
+                cartDiscountAmountDetailed.textContent = `-${formatPrice(discountAmount)}`;
+                discountRow.style.display = 'flex';
+            } else {
+                discountRow.style.display = 'none';
+            }
+        }
+        
         if (cartTotalPriceDetailed) {
             cartTotalPriceDetailed.textContent = formatPrice(total);
         }
     }
 
+    // --- HÀM RENDER GIỎ HÀNG ---
     function renderDetailedCart() {
         if (!cartItemsDetailedList || !cartDetailedEmptyMessage) {
-            console.error("Cart list or empty message element not found");
+            console.error("Không tìm thấy danh sách giỏ hàng hoặc phần tử tin nhắn trống");
             return;
         };
 
@@ -79,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const item = cart[cartItemId];
                 const product = getProductById(item.id);
                 if (!product) {
-                    console.warn(`Product ID ${item.id} not found for cart item ${cartItemId}. Skipping render.`);
+                    console.warn(`Không tìm thấy ID sản phẩm ${item.id} cho mặt hàng ${cartItemId} trong giỏ. Bỏ qua hiển thị.`);
                     return;
                 }
 
@@ -89,7 +122,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 let customization = '';
                 if (item.size && !item.isDealComponent) {
-                    customization = `Size: ${item.size}`;
+                    // ĐÃ DỊCH
+                    customization = `Kích cỡ: ${item.size}`;
                 } else if (item.popcornChoice || item.drinkChoice) {
                      customization = [item.popcornChoice, item.drinkChoice].filter(Boolean).join(', ');
                 }
@@ -103,17 +137,17 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="cart-item-info">
                         <span class="cart-item-name">${item.name}</span>
                         ${customization ? `<span class="cart-item-customization">${customization}</span>` : ''}
-                        <span class="cart-item-price-each">(${formatPrice(pricePerItem)} / item)</span>
+                        <span class="cart-item-price-each">(${formatPrice(pricePerItem)} / sản phẩm)</span>
                     </div>
                     <div class="cart-item-quantity">
                         <button class="quantity-btn-cart minus" data-id="${cartItemId}" type="button" ${quantity <= 1 ? 'disabled' : ''}>-</button>
-                        <input type="number" class="quantity-input-cart" value="${quantity}" min="1" data-id="${cartItemId}" aria-label="Item Quantity">
+                        <input type="number" class="quantity-input-cart" value="${quantity}" min="1" data-id="${cartItemId}" aria-label="Số lượng mặt hàng">
                         <button class="quantity-btn-cart plus" data-id="${cartItemId}" type="button">+</button>
                     </div>
                     <div class="cart-item-total-price">
                         ${formatPrice(itemTotalPrice)}
                     </div>
-                    <button class="cart-item-delete-detailed" data-id="${cartItemId}" type="button">&times;</button>
+                    <button class="cart-item-delete-detailed" data-id="${cartItemId}" type="button" aria-label="Xóa mặt hàng">&times;</button>
                 `;
                 cartItemsDetailedList.appendChild(itemElement);
             });
@@ -121,6 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
         updateCartTotalDetailed();
     }
 
+    // --- Các hàm cập nhật số lượng ---
     function updateCartItemQuantity(cartItemId, newValue) {
         const cart = getCart();
         if (cart[cartItemId]) {
@@ -128,8 +163,6 @@ document.addEventListener('DOMContentLoaded', () => {
             cart[cartItemId].quantity = qty;
             saveCart(cart);
             renderDetailedCart();
-        } else {
-            console.warn("Attempted to update quantity for non-existent cart item:", cartItemId);
         }
     }
 
@@ -139,8 +172,6 @@ document.addEventListener('DOMContentLoaded', () => {
             cart[cartItemId].quantity++;
             saveCart(cart);
             renderDetailedCart();
-        } else {
-            console.warn("Attempted to increase quantity for non-existent cart item:", cartItemId);
         }
     }
 
@@ -153,8 +184,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             saveCart(cart);
             renderDetailedCart();
-        } else {
-            console.warn("Attempted to decrease quantity for non-existent cart item:", cartItemId);
         }
     }
 
@@ -164,19 +193,18 @@ document.addEventListener('DOMContentLoaded', () => {
             delete cart[cartItemId];
             saveCart(cart);
             renderDetailedCart();
-        } else {
-             console.warn("Attempted to remove non-existent cart item:", cartItemId);
         }
     }
 
+    // --- HÀM RENDER GỢI Ý ---
     function renderSuggestions() {
         if (!suggestionsList) {
-            console.error("Suggestion list element not found in cart.html");
+            console.error("Không tìm thấy phần tử danh sách gợi ý trong cart.html");
             return;
         }
         if (typeof productData === 'undefined' || !productData || productData.length === 0) {
-             console.error("productData is missing or empty in cart.js!");
-             suggestionsList.innerHTML = '<p>Error loading suggestions.</p>';
+             console.error("productData bị thiếu hoặc trống trong cart.js!");
+             suggestionsList.innerHTML = '<p>Lỗi tải gợi ý.</p>';
              return;
         }
 
@@ -196,18 +224,21 @@ document.addEventListener('DOMContentLoaded', () => {
             suggestions.forEach(product => {
                 const suggestionElement = document.createElement('div');
                 suggestionElement.className = 'suggestion-item';
+                // ĐÃ DỊCH
                 suggestionElement.innerHTML = `
                     <img src="${product.image}" alt="${product.name}">
                     <span class="suggestion-name">${product.name}</span>
-                    <a href="catalogue.html#category-${product.category}" class="button suggestion-add-btn">View</a>
+                    <a href="catalogue.html#category-${product.category}" class="button suggestion-add-btn">Xem</a>
                 `;
                 suggestionsList.appendChild(suggestionElement);
             });
         } else {
-            suggestionsList.innerHTML = '<p>No suggestions right now!</p>';
+            // ĐÃ DỊCH
+            suggestionsList.innerHTML = '<p>Hiện không có gợi ý nào!</p>';
         }
     }
 
+    // --- CÁC EVENT LISTENERS ---
     cartItemsDetailedList?.addEventListener('click', (e) => {
         const target = e.target;
         const cartItem = target.closest('.cart-item-detailed');
@@ -238,23 +269,64 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    checkoutBtnDetailed?.addEventListener('click', () => {
+    // Nút áp dụng mã (ĐÃ DỊCH)
+    applyDiscountBtn?.addEventListener('click', () => {
+        const code = discountCodeInput.value.trim().toUpperCase();
+        
+        if (code === 'SALE10') {
+            currentDiscountPercent = 0.10; // Giảm 10%
+            if(discountMessage) {
+                discountMessage.textContent = 'Đã áp dụng giảm giá 10%!';
+                discountMessage.className = 'form-message success';
+            }
+        } else if (code === 'POPCORN') {
+            currentDiscountPercent = 0.05; // Giảm 5%
+            if(discountMessage) {
+                discountMessage.textContent = 'Đã áp dụng giảm giá 5%!';
+                discountMessage.className = 'form-message success';
+            }
+        } else {
+            currentDiscountPercent = 0; // Mã không hợp lệ
+            if(discountMessage) {
+                discountMessage.textContent = 'Mã giảm giá không hợp lệ.';
+                discountMessage.className = 'form-message error';
+            }
+        }
+        updateCartTotalDetailed();
+    });
+
+    // Nút PayPal (ĐÃ DỊCH)
+    paypalCheckoutBtn?.addEventListener('click', () => {
         const cart = getCart();
         if (Object.keys(cart).length === 0) {
-            alert("Your cart is empty!");
+            alert("Giỏ hàng của bạn đang trống!");
             return;
         }
         const totalText = cartTotalPriceDetailed ? cartTotalPriceDetailed.textContent : '$?.??';
-        alert(`Proceeding to checkout simulation. Total: ${totalText}`);
+        alert(`Chuyển đến PayPal để thanh toán... (Mô phỏng). Tổng: ${totalText}`);
     });
 
+    // Cập nhật nút checkout cũ (ĐÃ DỊCH)
+    checkoutBtnDetailed?.addEventListener('click', () => {
+        const cart = getCart();
+        if (Object.keys(cart).length === 0) {
+            alert("Giỏ hàng của bạn đang trống!");
+            return;
+        }
+        const totalText = cartTotalPriceDetailed ? cartTotalPriceDetailed.textContent : '$?.??';
+        alert(`Tiến hành thanh toán (Mô phỏng). Tổng: ${totalText}`);
+    });
+
+
+    // --- KHỞI CHẠY ---
     if (typeof productData !== 'undefined' && productData.length > 0) {
         renderDetailedCart();
         renderSuggestions();
     } else {
-        console.error("Cannot render page: productData is missing!");
-         if(cartItemsDetailedList) cartItemsDetailedList.innerHTML = '<p style="color: red;">Error loading product data. Cannot display cart.</p>';
-         if(suggestionsList) suggestionsList.innerHTML = '<p style="color: red;">Error loading product data. Cannot display suggestions.</p>';
+        // ĐÃ DỊCH
+        console.error("Không thể hiển thị trang: productData bị thiếu!");
+         if(cartItemsDetailedList) cartItemsDetailedList.innerHTML = '<p style="color: red;">Lỗi tải dữ liệu sản phẩm. Không thể hiển thị giỏ hàng.</p>';
+         if(suggestionsList) suggestionsList.innerHTML = '<p style="color: red;">Lỗi tải dữ liệu sản phẩm. Không thể hiển thị gợi ý.</p>';
     }
 
 });

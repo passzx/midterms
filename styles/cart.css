@@ -275,3 +275,103 @@
      .suggested-items-area { padding: 15px; }
      .suggested-items-area h2 { font-size: 1.2em; }
 }
+
+/* === THÊM VÀO CUỐI TỆP styles/cart.css === */
+
+/* Mã giảm giá */
+.discount-section {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+  }
+  .discount-section label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .discount-input-group {
+    display: flex;
+    gap: 10px;
+  }
+  .discount-input-group input[type="text"] {
+    flex-grow: 1;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    font-family: inherit;
+  }
+  .discount-input-group button {
+    padding: 10px 15px;
+    font-size: 0.9em;
+    flex-shrink: 0;
+    transform: none; /* Bỏ hiệu ứng hover scale */
+  }
+  .discount-input-group button:hover {
+    transform: none; /* Bỏ hiệu ứng hover scale */
+  }
+  
+  
+  /* Tin nhắn form (để hiển thị lỗi/thành công) */
+  .form-message {
+    margin-top: 10px;
+    font-size: 0.9em;
+    font-weight: bold;
+    min-height: 1.2em;
+  }
+  .form-message.success {
+    color: #28a745;
+  }
+  .form-message.error {
+    color: #dc3545;
+  }
+  
+  /* Cập nhật hiển thị Tổng */
+  .cart-total-detailed.discount-row {
+    font-size: 1.1em;
+    color: #28a745;
+    font-weight: normal;
+  }
+  .cart-total-detailed.final-total {
+    font-size: 1.3em;
+    font-weight: bold;
+  }
+  /* Đổi màu số tiền tổng */
+  .cart-total-detailed.final-total #cart-total-price-detailed {
+    color: var(--primary-color, #3498db);
+  }
+  
+  
+  /* Nút PayPal */
+  .paypal-divider {
+    text-align: center;
+    margin: 15px 0;
+    color: #888;
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .paypal-divider::before,
+  .paypal-divider::after {
+    content: '';
+    flex-grow: 1;
+    height: 1px;
+    background-color: #eee;
+  }
+  
+  .paypal-btn {
+    width: 100%;
+    background-color: #ffc439; /* Màu của PayPal */
+    color: #00457c; /* Màu chữ của PayPal */
+    font-weight: bold;
+    padding: 15px;
+    font-size: 1.2em;
+    text-align: center;
+    border: none;
+  }
+  .paypal-btn:hover {
+    background-color: #f0b935;
+    color: #00457c;
+    transform: scale(1.01);
+  }

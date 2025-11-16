@@ -229,3 +229,97 @@
     .feedback-section { padding: 20px; }
     .contact-item { font-size: 1em; }
 }
+
+/* === THÊM VÀO CUỐI TỆP styles/about.css === */
+
+/* Sứ mệnh và Tầm nhìn */
+.mission-vision-section {
+    background-color: #f8f9fa; /* Nền hơi khác một chút */
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-bottom: var(--section-spacing);
+}
+
+.mission-vision-container {
+    display: flex;
+    gap: 30px;
+}
+
+.vision-item {
+    flex: 1;
+    text-align: center;
+}
+
+.vision-item h2 {
+    font-size: 1.8em;
+    color: var(--primary-color);
+    border-bottom: none; /* Bỏ đường gạch chân chung */
+    padding-bottom: 0;
+    margin-bottom: 15px;
+}
+
+.vision-item p {
+    font-size: 1.05em;
+    line-height: 1.7;
+    color: #444;
+}
+
+/* Giới thiệu Sản phẩm */
+.product-intro-section {
+    margin-bottom: var(--section-spacing);
+    text-align: center;
+}
+
+.product-intro-section h2 {
+    display: inline-block;
+}
+
+.product-intro-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.product-intro-card {
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.product-intro-card img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.product-intro-card h3 {
+    font-size: 1.3em;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.product-intro-card p {
+    font-size: 0.95em;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Responsive cho các mục mới */
+@media (max-width: 768px) {
+    .mission-vision-container {
+        flex-direction: column;
+        gap: 25px;
+    }
+    
+    .product-intro-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* === KẾT THÚC PHẦN THÊM VÀO === */

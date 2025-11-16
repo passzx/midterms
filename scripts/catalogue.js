@@ -1,22 +1,23 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    // ĐÃ DỊCH MÔ TẢ (DESCRIPTION)
     const productData = [
-        { id: 'deal001', category: 'deals', name: 'Night For 2', description: 'Deal includes: 2x 105oz Popcorn (choose flavor) + 1x 42oz Drink (choose type).', basePrice: 2.99, image: 'images/deal_night.jpg', hasSizeSelection: false, hasQuantitySelection: false, hasPopcornChoice: true, hasDrinkChoice: true, popcornCount: 2, popcornSize: '105oz', drinkCount: 1, drinkSize: '42oz' },
-        { id: 'deal002', category: 'deals', name: 'Solo Watcher', description: 'Deal includes: 1x 105oz Popcorn (choose flavor) + 1x 30oz Drink (choose type).', basePrice: 1.99, image: 'images/deal_solo.jpg', hasSizeSelection: false, hasQuantitySelection: false, hasPopcornChoice: true, hasDrinkChoice: true, popcornCount: 1, popcornSize: '105oz', drinkCount: 1, drinkSize: '30oz' },
-        { id: 'deal003', category: 'deals', name: 'Seasoned Popcorn Maker', description: 'Deal includes: 1x Popcorn Kernel Kit + 1x Seasoning Sampler.', basePrice: 1.49, image: 'images/deal_diy.jpg', hasSizeSelection: false, hasQuantitySelection: true, hasPopcornChoice: false, hasDrinkChoice: false },
+        { id: 'deal001', category: 'deals', name: 'Night For 2', description: 'Gói bao gồm: 2x Bắp rang 105oz (chọn vị) + 1x Nước 42oz (chọn loại).', basePrice: 2.99, image: 'images/deal_night.jpg', hasSizeSelection: false, hasQuantitySelection: false, hasPopcornChoice: true, hasDrinkChoice: true, popcornCount: 2, popcornSize: '105oz', drinkCount: 1, drinkSize: '42oz' },
+        { id: 'deal002', category: 'deals', name: 'Solo Watcher', description: 'Gói bao gồm: 1x Bắp rang 105oz (chọn vị) + 1x Nước 30oz (chọn loại).', basePrice: 1.99, image: 'images/deal_solo.jpg', hasSizeSelection: false, hasQuantitySelection: false, hasPopcornChoice: true, hasDrinkChoice: true, popcornCount: 1, popcornSize: '105oz', drinkCount: 1, drinkSize: '30oz' },
+        { id: 'deal003', category: 'deals', name: 'Seasoned Popcorn Maker', description: 'Gói bao gồm: 1x Bộ Hạt Bắp + 1x Bộ Gia Vị Thử.', basePrice: 1.49, image: 'images/deal_diy.jpg', hasSizeSelection: false, hasQuantitySelection: true, hasPopcornChoice: false, hasDrinkChoice: false },
 
-        { id: 'pop001', category: 'popcorn', name: 'Buttery Classic', description: 'Warm, buttery, and irresistible.', basePrice: 0.99, image: 'images/product_popcorn1.jpg', hasSizeSelection: true, hasQuantitySelection: true, detailPage: 'products_A.html' },
-        { id: 'pop002', category: 'popcorn', name: 'Caramel Bliss', description: 'Sweet, crunchy caramel coating.', basePrice: 0.99, image: 'images/product_popcorn2.jpg', hasSizeSelection: true, hasQuantitySelection: true, detailPage: 'products_A.html' },
-        { id: 'pop003', category: 'popcorn', name: 'Spicy Chili', description: 'Popcorn with a kick!', basePrice: 0.99, image: 'images/product_popcorn3.jpg', hasSizeSelection: true, hasQuantitySelection: true, detailPage: 'products_A.html' },
-        { id: 'pop004', category: 'popcorn', name: 'Cheesy Cheddar', description: 'Savory cheddar cheese flavor.', basePrice: 0.99, image: 'images/product_popcorn4.jpg', hasSizeSelection: true, hasQuantitySelection: true, detailPage: 'products_A.html' },
+        { id: 'pop001', category: 'popcorn', name: 'Buttery Classic', description: 'Ấm áp, béo ngậy mùi bơ, không thể cưỡng lại.', basePrice: 0.99, image: 'images/product_popcorn1.jpg', hasSizeSelection: true, hasQuantitySelection: true, detailPage: 'products_A.html' },
+        { id: 'pop002', category: 'popcorn', name: 'Caramel Bliss', description: 'Lớp phủ caramen ngọt ngào, giòn tan.', basePrice: 0.99, image: 'images/product_popcorn2.jpg', hasSizeSelection: true, hasQuantitySelection: true, detailPage: 'products_A.html' },
+        { id: 'pop003', category: 'popcorn', name: 'Spicy Chili', description: 'Bắp rang bơ với một cú hích cay nồng!', basePrice: 0.99, image: 'images/product_popcorn3.jpg', hasSizeSelection: true, hasQuantitySelection: true, detailPage: 'products_A.html' },
+        { id: 'pop004', category: 'popcorn', name: 'Cheesy Cheddar', description: 'Hương vị phô mai cheddar đậm đà.', basePrice: 0.99, image: 'images/product_popcorn4.jpg', hasSizeSelection: true, hasQuantitySelection: true, detailPage: 'products_A.html' },
 
-        { id: 'drk001', category: 'drinks', name: 'Coca-Cola', description: 'The standard bubbly refreshment.', basePrice: 0.75, image: 'images/product_drink1.jpg', hasSizeSelection: true, hasQuantitySelection: true },
-        { id: 'drk002', category: 'drinks', name: 'Lipton Iced Tea', description: 'Refreshing classic iced tea.', basePrice: 0.75, image: 'images/product_drink2.jpg', hasSizeSelection: true, hasQuantitySelection: true },
-        { id: 'drk003', category: 'drinks', name: 'Tropicana Twister', description: 'Freshly squeezed (not really) Vitamin C.', basePrice: 0.75, image: 'images/product_drink3.jpg', hasSizeSelection: true, hasQuantitySelection: true },
-        { id: 'drk004', category: 'drinks', name: 'Aquafina', description: 'Pure and simple hydration.', basePrice: 0.75, image: 'images/product_drink4.jpg', hasSizeSelection: true, hasQuantitySelection: true },
+        { id: 'drk001', category: 'drinks', name: 'Coca-Cola', description: 'Sự sảng khoái sủi bọt tiêu chuẩn.', basePrice: 0.75, image: 'images/product_drink1.jpg', hasSizeSelection: true, hasQuantitySelection: true },
+        { id: 'drk002', category: 'drinks', name: 'Lipton Iced Tea', description: 'Trà đá cổ điển sảng khoái.', basePrice: 0.75, image: 'images/product_drink2.jpg', hasSizeSelection: true, hasQuantitySelection: true },
+        { id: 'drk003', category: 'drinks', name: 'Tropicana Twister', description: 'Vitamin C tươi vắt (không hẳn).', basePrice: 0.75, image: 'images/product_drink3.jpg', hasSizeSelection: true, hasQuantitySelection: true },
+        { id: 'drk004', category: 'drinks', name: 'Aquafina', description: 'Sự hydrat hóa tinh khiết và đơn giản.', basePrice: 0.75, image: 'images/product_drink4.jpg', hasSizeSelection: true, hasQuantitySelection: true },
 
-        { id: 'diy001', category: 'diy', name: 'Popcorn Kernel Kit', description: 'The start of your popping journey.', basePrice: 0.99, image: 'images/product_diy1.jpg', hasSizeSelection: false, hasQuantitySelection: true, detailPage: 'products_B.html' },
-        { id: 'diy002', category: 'diy', name: 'Seasoning Sampler', description: 'Variety pack of popcorn seasonings, provided by our partner, Kernels Seasons!', basePrice: 0.99, image: 'images/product_diy2.jpg', hasSizeSelection: false, hasQuantitySelection: true, detailPage: 'products_C.html' },
+        { id: 'diy001', category: 'diy', name: 'Popcorn Kernel Kit', description: 'Khởi đầu cho hành trình tự nổ bắp của bạn.', basePrice: 0.99, image: 'images/product_diy1.jpg', hasSizeSelection: false, hasQuantitySelection: true, detailPage: 'products_B.html' },
+        { id: 'diy002', category: 'diy', name: 'Seasoning Sampler', description: 'Gói đa dạng các loại gia vị bắp rang bơ, được cung cấp bởi đối tác của chúng tôi, Kernels Seasons!', basePrice: 0.99, image: 'images/product_diy2.jpg', hasSizeSelection: false, hasQuantitySelection: true, detailPage: 'products_C.html' },
     ];
 
     const productListContainer = document.getElementById('product-list');
@@ -91,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             return cartJson ? JSON.parse(cartJson) : {};
         } catch (e) {
-            console.error("Error parsing cart JSON from localStorage", e);
+            console.error("Lỗi phân tích JSON giỏ hàng từ localStorage", e);
             return {};
         }
     }
@@ -120,7 +121,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 let customization = '';
                 if (item.size && !item.isDealComponent) {
-                    customization = `Size: ${item.size}`;
+                    // ĐÃ DỊCH
+                    customization = `Kích cỡ: ${item.size}`;
                 } else if (item.popcornChoice || item.drinkChoice) {
                      customization = [item.popcornChoice, item.drinkChoice].filter(Boolean).join(', ');
                 }
@@ -231,8 +233,9 @@ document.addEventListener('DOMContentLoaded', () => {
             } else if (product.category === 'deals' && product.hasQuantitySelection) {
                  cart[cartItemId].quantity += quantity;
             } else {
-                console.warn("Item quantity cannot be changed or item already in cart.");
-                 alert(`${product.name} is limited to 1 per purchase.`);
+                // ĐÃ DỊCH
+                console.warn("Số lượng mặt hàng không thể thay đổi hoặc mặt hàng đã có trong giỏ hàng.");
+                alert(`${product.name} chỉ được mua 1 lần.`);
                 return;
             }
         } else {
@@ -250,7 +253,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         saveCart(cart);
         renderCart();
-        console.log('Cart updated:', cart);
+        console.log('Đã cập nhật giỏ hàng:', cart);
     }
 
     function removeFromCart(cartItemId) {
@@ -313,22 +316,23 @@ document.addEventListener('DOMContentLoaded', () => {
        currentModalProductId = productId;
 
        modalProductImage.src = product.image;
+       // ĐÃ DỊCH
        modalProductImage.alt = product.name;
        modalProductName.textContent = product.name;
-       modalProductDescription.textContent = product.description;
+       modalProductDescription.textContent = product.description; // Mô tả đã được dịch ở productData
 
         modalDetailLinkContainer.innerHTML = '';
         if (product.detailPage) {
             const detailLink = document.createElement('a');
             detailLink.href = product.detailPage;
-            detailLink.textContent = 'View Full Details';
+            // ĐÃ DỊCH
+            detailLink.textContent = 'Xem chi tiết đầy đủ';
             detailLink.className = 'modal-detail-link';
             modalDetailLinkContainer.appendChild(detailLink);
         }
 
-       // --- Reset and Configure Modal Options ---
+       // --- Đặt lại và Cấu hình Tùy chọn Modal ---
 
-       // A) Hide/Show sections based on product type
        const showSize = product.hasSizeSelection;
        const showQty = product.hasQuantitySelection;
        const showPopcorn = product.hasPopcornChoice;
@@ -342,10 +346,10 @@ document.addEventListener('DOMContentLoaded', () => {
        modalDealPopcornChoice.parentElement.style.display = showPopcorn ? 'block' : 'none';
        modalDealDrinkChoice.parentElement.style.display = showDrink ? 'block' : 'none';
 
-       // B) Populate Size Options
+       // Điền tùy chọn Kích cỡ (ĐÃ DỊCH)
        if (showSize) {
         const sizeFieldset = modalSizeOptionsContainer;
-        sizeFieldset.innerHTML = '<legend>Choose Size:</legend>';
+        sizeFieldset.innerHTML = '<legend>Chọn kích cỡ:</legend>';
         let sizes = [];
         let defaultSize = '';
 
@@ -381,7 +385,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-       // C) Populate Deal Choices (Popcorn/Drink)
+       // Điền lựa chọn Gói (Popcorn/Drink)
         const popcornProducts = productData.filter(p => p.category === 'popcorn');
         const drinkProducts = productData.filter(p => p.category === 'drinks');
 
@@ -400,7 +404,6 @@ document.addEventListener('DOMContentLoaded', () => {
            });
        }
 
-       // D) Update initial price and show modal
        updateModalPrice();
        modal.classList.add('active');
        modalOverlay.classList.add('active');
@@ -505,11 +508,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // ĐÃ DỊCH
     const checkoutBtn = document.getElementById('checkout-btn');
     checkoutBtn?.addEventListener('click', () => {
         const cart = getCart();
         if (Object.keys(cart).length === 0) {
-            alert("Your cart is empty!");
+            alert("Giỏ hàng của bạn đang trống!");
             return;
         } else window.location.href = 'cart.html';
     });
