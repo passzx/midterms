@@ -106,25 +106,25 @@
 .job-clerk {
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-        url('../images/career_bg_clerk.jpg');
+        url('../images/career_bg_clerk.webp');
 }
 
 .job-social {
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-        url('../images/career_bg_social.jpg');
+        url('../images/career_bg_social.webp');
 }
 
 .job-mascot {
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-        url('../images/career_bg_mascot.jpg');
+        url('../images/career_bg_mascot.webp');
 }
 
 .job-maker {
      background-image:
         linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-        url('../images/career_bg_maker.jpg');
+        url('../images/career_bg_maker.webp');
 }
 
 .apply-button-container {

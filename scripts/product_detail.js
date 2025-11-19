@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     const productData = [
-       { id: 'pop001', category: 'popcorn', name: 'Buttery Classic', description: 'Warm, buttery, and irresistible.', basePrice: 0.99, image: 'images/product_popcorn1.jpg', hasSizeSelection: true, hasQuantitySelection: true, detailPage: 'products_A.html' },
-       { id: 'pop002', category: 'popcorn', name: 'Caramel Bliss', description: 'Sweet, crunchy caramel coating.', basePrice: 0.99, image: 'images/product_popcorn2.jpg', hasSizeSelection: true, hasQuantitySelection: true, detailPage: 'products_A.html' },
-       { id: 'pop003', category: 'popcorn', name: 'Spicy Chili', description: 'Popcorn with a kick!', basePrice: 0.99, image: 'images/product_popcorn3.jpg', hasSizeSelection: true, hasQuantitySelection: true, detailPage: 'products_A.html' },
-       { id: 'pop004', category: 'popcorn', name: 'Cheesy Cheddar', description: 'Savory cheddar cheese flavor.', basePrice: 0.99, image: 'images/product_popcorn4.jpg', hasSizeSelection: true, hasQuantitySelection: true, detailPage: 'products_A.html' },
-       { id: 'diy001', category: 'diy', name: 'Popcorn Kernel Kit', description: 'Everything you need to pop at home.', basePrice: 0.99, image: 'images/product_diy1.jpg', hasSizeSelection: false, hasQuantitySelection: true, detailPage: 'products_B.html' },
-       { id: 'diy002', category: 'diy', name: 'Seasoning Sampler', description: 'Variety pack of popcorn seasonings.', basePrice: 0.99, image: 'images/product_diy2.jpg', hasSizeSelection: false, hasQuantitySelection: true, detailPage: 'products_C.html' },
+       { id: 'pop001', category: 'popcorn', name: 'Buttery Classic', description: 'Warm, buttery, and irresistible.', basePrice: 0.99, image: 'images/product_popcorn1.webp', hasSizeSelection: true, hasQuantitySelection: true, detailPage: 'products_A.html' },
+       { id: 'pop002', category: 'popcorn', name: 'Caramel Bliss', description: 'Sweet, crunchy caramel coating.', basePrice: 0.99, image: 'images/product_popcorn2.webp', hasSizeSelection: true, hasQuantitySelection: true, detailPage: 'products_A.html' },
+       { id: 'pop003', category: 'popcorn', name: 'Spicy Chili', description: 'Popcorn with a kick!', basePrice: 0.99, image: 'images/product_popcorn3.webp', hasSizeSelection: true, hasQuantitySelection: true, detailPage: 'products_A.html' },
+       { id: 'pop004', category: 'popcorn', name: 'Cheesy Cheddar', description: 'Savory cheddar cheese flavor.', basePrice: 0.99, image: 'images/product_popcorn4.webp', hasSizeSelection: true, hasQuantitySelection: true, detailPage: 'products_A.html' },
+       { id: 'diy001', category: 'diy', name: 'Popcorn Kernel Kit', description: 'Everything you need to pop at home.', basePrice: 0.99, image: 'images/product_diy1.webp', hasSizeSelection: false, hasQuantitySelection: true, detailPage: 'products_B.html' },
+       { id: 'diy002', category: 'diy', name: 'Seasoning Sampler', description: 'Variety pack of popcorn seasonings.', basePrice: 0.99, image: 'images/product_diy2.webp', hasSizeSelection: false, hasQuantitySelection: true, detailPage: 'products_C.html' },
    ];
 
    const mainImage = document.getElementById('gallery-main-image');

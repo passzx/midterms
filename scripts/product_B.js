@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const product = {
         id: 'diy001', category: 'diy', name: 'Popcorn Kernel Kit',
         description: 'Everything you need to pop at home.', basePrice: 0.99,
-        image: 'images/product_diy1.jpg',
+        image: 'images/product_diy1.webp',
         hasSizeSelection: false, hasQuantitySelection: true, detailPage: 'products_B.html'
     };
     const CURRENT_PRODUCT_ID = 'diy001';
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
         displayConfirmation(`Added ${quantity} x ${product.name} to cart!`);
     }
 
-    const galleryImages = ['images/product_diy1.jpg', 'images/pB1.jpg', 'images/pB2.jpg', 'images/pB3.jpg', 'images/pB4.jpeg'];
+    const galleryImages = ['images/product_diy1.webp', 'images/pB1.webp', 'images/pB2.webp', 'images/pB3.webp', 'images/pB4.webp'];
     let currentIndex = 0;
 
     function updateGallery(index) {

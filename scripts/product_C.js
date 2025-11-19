@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const product = {
         id: 'diy002', category: 'diy', name: 'Seasoning Sampler',
         description: 'Variety pack of popcorn seasonings.', basePrice: 0.99,
-        image: 'images/product_diy2.jpg',
+        image: 'images/product_diy2.webp',
         hasSizeSelection: false, hasQuantitySelection: true, detailPage: 'products_C.html'
     };
     const CURRENT_PRODUCT_ID = 'diy001';
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
         displayConfirmation(`Added ${quantity} x ${product.name} to cart!`);
     }
 
-    const galleryImages = ['images/product_diy2.jpg', 'images/pC1.jpg', 'images/pC2.jpg', 'images/pC3.jpg', 'images/pC4.jpg'];
+    const galleryImages = ['images/product_diy2.webp', 'images/pC1.webp', 'images/pC2.webp', 'images/pC3.webp', 'images/pC4.webp'];
     let currentIndex = 0;
 
     function updateGallery(index) {

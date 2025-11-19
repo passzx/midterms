@@ -23,4 +23,6 @@ Simulation of a business' website, and may or may not have to do with my grades.
 - FAQ: most websites, actually
 ### Images:
 - google.com (I think it's under fair use)
-
+## Notes to my Professor reading this
+I'm sorry for not being able to provide a video in time, because I despise having my voice on recording, and mainly for I think the code was self-explanatory in itself.
+As to why this entire project was in English, it's simply because I found English more easy to write things in.

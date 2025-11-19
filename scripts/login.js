@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let visitCount = parseInt(localStorage.getItem('loginVisitCount') || '0') + 1;
     localStorage.setItem('loginVisitCount', visitCount);
     const imageIndex = (visitCount % IMAGE_COUNT) + 1;
-    loginImagePanel && (loginImagePanel.style.backgroundImage = `url('${IMAGE_BASE}${imageIndex}.jpg')`);
+    loginImagePanel && (loginImagePanel.style.backgroundImage = `url('${IMAGE_BASE}${imageIndex}.webp')`);
   }
 
   function showUserInfo(username) {
